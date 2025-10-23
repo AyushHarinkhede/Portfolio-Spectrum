@@ -56,7 +56,7 @@
             background: rgba(var(--surface-rgb), 0.5);   /* Navigation manjhe Disha  */ /* Pardarshi base*/
             backdrop-filter: blur(25px) saturate(180%); /* he jo aahe blur glass effect la increase karto */
             padding: 15px 30px;
-            position: fixed;
+            position: fixed; /* Ek Jagah chipka hua */
             width: calc(100% - 40px);
             top: 20px;
             left: 50%;
