@@ -75,7 +75,9 @@ body {
     backdrop-filter: blur(10px);
     position: fixed;
     width: 90%;
+    box-shadow: #0a0a0a 0 8px 32px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset  ;
     border-radius: 45px;
+    border: 1px solid rgba(var(--on-surface-rgb), 0.1);
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
