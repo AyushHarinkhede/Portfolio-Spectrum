@@ -190,6 +190,5 @@
                 }
             }
         `;
-        document.head.appendChild(style);
-
+        document.head.appendChild(style); //Oh my god...
         console.log('🎨 Portfolio loaded successfully! Made with creativity by Ayush Harinkhede');
