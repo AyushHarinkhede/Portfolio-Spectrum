@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Harinkhede - Creations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AYUSH HARINKHEDE</div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="home.html">Welcome</a></li>
+                <li><a href="mystory.html">My Story</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="mystrengths.html">My Strengths</a></li>
+                <li><a href="creations.html" class="active">Creations</a></li>
+                <li><a href="getintouch.html">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title animate-fade-in">My Creations</h1>
+            <p class="section-subtitle animate-fade-in-delay-1">A showcase of my projects and creative work</p>
+            
+            <div class="projects-grid">
+                <div class="project-card animate-slide-up">
+                    <div class="project-image">
+                        <img src="Image5.png" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p class="project-tech">HTML | CSS | Responsive Design</p>
+                        <p>A modern and interactive portfolio website showcasing my skills, experience, and projects. Built with pure HTML and CSS, featuring smooth animations and a responsive layout.</p>
+                        <div class="project-tags">
+                            <span class="tag">Web Design</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-slide-up-delay-1">
+                    <div class="project-image">
+                        <img src="Image6.png" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Programming Projects</h3>
+                        <p class="project-tech">C | C++ | Java</p>
+                        <p>Various programming projects including data structures, algorithms, and problem-solving implementations. Focus on efficient code and optimal solutions.</p>
+                        <div class="project-tags">
+                            <span class="tag">Algorithms</span>
+                            <span class="tag">Data Structures</span>
+                            <span class="tag">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-slide-up-delay-2">
+                    <div class="project-image">
+                        <img src="Image7.png" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>Creative Scripts</h3>
+                        <p class="project-tech">Script Writing | Comedy</p>
+                        <p>Collection of creative scripts for drama, comedy sketches, and stand-up routines. Blending humor with meaningful messages and storytelling.</p>
+                        <div class="project-tags">
+                            <span class="tag">Writing</span>
+                            <span class="tag">Comedy</span>
+                            <span class="tag">Entertainment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-fade-in-delay-2">
+                    <div class="project-image">
+                        <img src="Image2.png" alt="Future Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Upcoming Projects</h3>
+                        <p class="project-tech">Web Apps | Mobile Dev | AI/ML</p>
+                        <p>Currently working on exciting new projects involving modern web technologies, mobile applications, and exploring machine learning concepts. Stay tuned for updates!</p>
+                        <div class="project-tags">
+                            <span class="tag">In Progress</span>
+                            <span class="tag">Innovation</span>
+                            <span class="tag">Future Tech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="creation-philosophy animate-fade-in-delay-2">
+                <h3>💡 My Creative Philosophy</h3>
+                <p>I believe that every project is an opportunity to learn something new and push my boundaries. Whether it's writing clean code, crafting engaging stories, or designing beautiful interfaces, I approach each creation with passion and dedication. My goal is not just to build things, but to create experiences that make a difference.</p>
+                <p>I'm always excited to take on new challenges and collaborate on innovative projects. If you have an interesting idea or project in mind, let's connect and bring it to life!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024-2025 Ayush Harinkhede. Made with ❤️</p>
+        <p class="footer-tagline">Creative | Innovative | Passionate</p>
+    </footer>
+
+    <style>
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.4);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .project-tech {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .project-content > p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(102, 126, 234, 0.2);
+            color: var(--primary-color);
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--primary-color);
+            transition: all 0.3s ease;
