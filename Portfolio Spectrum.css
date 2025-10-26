@@ -71,10 +71,11 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background: rgba(26, 26, 46, 0.95);
+    background: rgba(26, 26, 46, 0);
     backdrop-filter: blur(10px);
     position: fixed;
-    width: 100%;
+    width: 90%;
+    border-radius: 45px;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
@@ -199,26 +200,6 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-20px) rotate(2deg);
-    }
-}
-
-.phone-notch {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 30px;
-    background: #1e1e1e;
-    border-radius: 0 0 20px 20px;
-    z-index: 2;
-}
 
 .phone-screen {
     width: 100%;
@@ -235,7 +216,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: zoomIn 1s ease;
+
 }
 
 @keyframes zoomIn {
@@ -391,38 +372,6 @@ body {
     }
 }
 
-.animate-fade-in {
-    animation: fadeIn 0.8s ease forwards;
-}
-
-.animate-fade-in-delay-1 {
-    animation: fadeIn 0.8s ease 0.2s forwards;
-    opacity: 0;
-}
-
-.animate-fade-in-delay-2 {
-    animation: fadeIn 0.8s ease 0.4s forwards;
-    opacity: 0;
-}
-
-.animate-slide-up {
-    animation: slideUp 0.8s ease forwards;
-}
-
-.animate-slide-up-delay-1 {
-    animation: slideUp 0.8s ease 0.2s forwards;
-    opacity: 0;
-}
-
-.animate-slide-up-delay-2 {
-    animation: slideUp 0.8s ease 0.4s forwards;
-    opacity: 0;
-}
-
-.animate-slide-up-delay-3 {
-    animation: slideUp 0.8s ease 0.6s forwards;
-    opacity: 0;
-}
 
 /* Section Styles */
 .section {
