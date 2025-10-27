@@ -20,13 +20,74 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Body par basic setup */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-primary);
-    line-height: 1.6;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+    /* Content ko center me laane ke liye */
+    min-height: 1000vh;
+    display: grid;
+    place-items: center;
+    
+    /* Position relative zaroori hai pseudo-elements ke liye */
+    position: relative;
+    
+    /* txt ko white beacuse wo bg me fit hora tha  */
+    color: white;
+    text-align: center;
 }
+
+/* Step 1: Background image (Blur layer) */
+body::before {
+    content: 'centre'; /* Pseudo-element ke liye zaroori hai */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Apni image ka URL yahaan daalein */
+    background: url('Image2.jpg') no-repeat center center/cover;
+    
+    /* Yahaan blur effect lagayenge (aap '3px' ko kam ya zyada kar sakte hain) */
+    filter: blur(3px);
+    
+    /* Ise sabse peeche rakhein */
+    z-index: -2;
+}
+
+/* Step 2: Dark shade (Overlay layer) */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Halka dark shade (0.4 = 40% black). Aap 0.3 ya 0.5 try kar sakte hain. */
+    background: rgba(0, 0, 0, 0.4);
+    
+    /* Ise image ke upar lekin content ke peeche rakhein */
+    z-index: -1;
+}
+
+/* Step 3: Content (Yeh blur nahi hoga) */
+.content {
+    /* Position relative zaroori nahi hai agar body me z-index nahi hai, 
+       lekin acchi practice hai */
+    position: relative;
+    display: inline;
+    z-index: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
 
  HEAD
 .container {
@@ -165,8 +226,7 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 80px;
-    background: radial-gradient(ellipse at top, rgba(102, 126, 234, 0.1), transparent),
-                radial-gradient(ellipse at bottom, rgba(118, 75, 162, 0.1), transparent);
+    
 }
 
 .hero-content {
@@ -184,10 +244,8 @@ body {
     height: 600px;
     background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
     border-radius: 40px;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
-                inset 0 0 20px rgba(255, 255, 255, 0.05);
-    animation: float 6s ease-in-out infinite;
 }
 
 
@@ -209,16 +267,6 @@ body {
 
 }
 
-@keyframes zoomIn {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 
 /* Welcome Text */
 .welcome-text {
@@ -302,7 +350,6 @@ body {
 }
 
 .info-card::before {
-    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
