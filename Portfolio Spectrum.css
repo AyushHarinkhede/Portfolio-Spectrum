@@ -1,14 +1,11 @@
-/* ================================== */
-/* 1. RESET AUR ROOT VARIABLES        */
-/* ================================== */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Isse padding aur border element ki total width/height mein include ho jaate hain */
+    box-sizing: border-box;
 }
 
 :root {
-    /* ':root' ka istemaal global CSS variables (colors, fonts) define karne ke liye hota hai */
     --primary-color: #667eea;
     --secondary-color: #764ba2;
     --accent-color: #f093fb;
@@ -19,11 +16,8 @@
     --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
 }
 
-/* ================================== */
-/* 2. GLOBAL STYLES (HTML, BODY)      */
-/* ================================== */
 html {
-    scroll-behavior: smooth; /* Jab aap link par click karte hain, toh page smoothly scroll hota hai */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,32 +28,76 @@ body {
     overflow-x: hidden;
 }
 
+
+
+ HEAD
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+        .doodle {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+        .doodle-1 { top: 10%; left: 5%; animation-delay: 0s; }
+        .doodle-2 { top: 30%; right: 10%; animation-delay: 1s; }
+        .doodle-3 { bottom: 20%; left: 15%; animation-delay: 2s; }
+        .doodle-4 { top: 60%; right: 5%; animation-delay: 3s; }
+    
+        @keyframes float { /* Mi yaanla Odakhto nahi */
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+  
+        nav {
+            background: rgba(var(--surface-rgb), 0.5);   /* Navigation manjhe Disha  */ /* Pardarshi base*/
+            backdrop-filter: blur(25px) saturate(180%); /* he jo aahe blur glass effect la increase karto */
+            padding: 15px 30px;
+            position: fixed; /* Ek Jagah chipka hua */
+            width: calc(100% - 40px);
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;  /* Khaalcha Bhaag ?  */
+            display: flex;
+            gap: 15px;
+            border-radius: var(--border-radius-full);
+            align-items: center; /*  Madhat */
+            border: 1px solid rgba(var(--on-surface-rgb), 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.2); /* Kadi kadi Parchaahi */
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+        }
 
-/* ================================== */
-/* 3. NAVIGATION BAR (NAVBAR)         */
-/* ================================== */
+/* Navigation Bar */
 .navbar {
-    background: rgba(26, 26, 46, 0.7); /* Thoda transparency kam kiya */
-    backdrop-filter: blur(15px); /* 'Frosted glass' effect deta hai */
+    background: rgba(26, 26, 46, 0);
+    backdrop-filter: blur(10px);
     position: fixed;
-    width: calc(100% - 40px); /* Screen ki width se 40px kam */
-    max-width: 1200px; /* Maximum width 1200px rakhi */
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%); /* Element ko horizontally center karta hai */
-    z-index: 1000;
+    width: 90%;
+    box-shadow: #0a0a0a 0 8px 32px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset  ;
     border-radius: 45px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease; /* Sirf hover par simple transition */
+    border: 1px solid rgba(var(--on-surface-rgb), 0.1);
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,9 +108,27 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     background: var(--gradient);
-    -webkit-background-clip: text; /* Background (gradient) ko text ke shape mein clip karta hai */
-    -webkit-text-fill-color: transparent; /* Text ka color transparent kar deta hai taaki background dikhe */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     letter-spacing: 2px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle-label span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    margin: 3px 0;
+    transition: 0.3s;
 }
 
 .nav-menu {
@@ -103,57 +159,34 @@ body {
     transform: translateX(-50%);
 }
 
-/* Simple hover effects */
+.nav-menu a:hover::before,
+.nav-menu a.active::before {
+    width: 80%;
+}
+
 .nav-menu a:hover,
 .nav-menu a.active {
     color: var(--accent-color);
     transform: translateY(-2px);
 }
 
-.nav-menu a:hover::before,
-.nav-menu a.active::before {
-    width: 80%;
-}
-
-/* Mobile Menu Toggle (Yeh 'display: none' zaroori hai desktop ke liye) */
-.nav-toggle {
-    display: none; /* Isse checkbox screen se hide ho jaata hai */
-}
-
-.nav-toggle-label {
-    display: none; /* Yeh sirf mobile par dikhega (media query mein) */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.nav-toggle-label span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-primary);
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-/* ================================== */
-/* 4. HERO SECTION                    */
-/* ================================== */
+/* Hero Section */
 .hero-section {
     min-height: 100vh;
-    display: flex; /* Flexbox ka istemaal center karne ke liye */
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 20px 20px 20px; /* Navbar ke liye upar padding di */
+    padding-top: 80px;
     background: radial-gradient(ellipse at top, rgba(102, 126, 234, 0.1), transparent),
                 radial-gradient(ellipse at bottom, rgba(118, 75, 162, 0.1), transparent);
 }
 
 .hero-content {
-    display: grid; /* Grid ka istemaal layout ke liye */
-    grid-template-columns: 1fr 1fr; /* Do equal columns */
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 /* Phone Frame */
@@ -166,13 +199,9 @@ body {
     padding: 15px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
                 inset 0 0 20px rgba(255, 255, 255, 0.05);
-    transition: transform 0.4s ease; /* Keyframe ki jagah simple hover */
-    margin: 0 auto; /* Mobile par center karne ke liye */
+    animation: float 6s ease-in-out infinite;
 }
 
-.phone-frame:hover {
-    transform: translateY(-10px); /* Hover par thoda upar uthega */
-}
 
 .phone-screen {
     width: 100%;
@@ -180,12 +209,27 @@ body {
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
     border-radius: 30px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Welcome Text */
@@ -246,55 +290,48 @@ body {
     transform: translateY(-3px);
 }
 
-/* ================================== */
-/* 5. GENERAL SECTION & CARD STYLES   */
-/* ================================== */
-.section {
+/* Quick Info Section */
+.quick-info {
     padding: 5rem 0;
+    background: rgba(255, 255, 255, 0.02);
 }
 
-.section-title {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.section-subtitle {
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-}
-
-/* Base Card Style (Reusable) */
-.card {
-    background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
-}
-
-/* Grid Layout for Cards */
-.content-grid {
+.info-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
-/* Individual Card Types (inheriting from .card) */
 .info-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 20px;
     text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.info-card:hover::before {
+    left: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
 }
 
 .info-card .icon {
@@ -302,8 +339,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.info-card h3,
-.content-card h3 {
+.info-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     background: var(--gradient);
@@ -311,7 +347,75 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.info-card p,
+.info-card p {
+    color: var(--text-secondary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Section Styles */
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.content-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+}
+
+.content-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .content-card p,
 .content-card ul {
     color: var(--text-secondary);
@@ -320,244 +424,51 @@ body {
 
 .content-card ul {
     list-style-position: inside;
-    margin-top: 1rem;
 }
 
-/* ================================== */
-/* 6. PROJECTS SECTION                */
-/* ================================== */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--bg-card);
+/* Image Container Styles */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.4);
-}
-
-.project-image {
+.image-container img {
     width: 100%;
-    height: 250px;
-    overflow: hidden;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.image-fade {
     position: relative;
 }
 
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+.image-fade::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, rgba(10, 10, 10, 0.7));
+    pointer-events: none;
 }
 
-.project-card:hover .project-image img {
-    transform: scale(1.1);
+/* Contact Page Styles */
+.contact-section {
+    padding: 5rem 0;
+    min-height: calc(100vh - 200px);
 }
 
-.project-content {
-    padding: 2rem;
-}
-
-.project-content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.project-tech {
-    color: var(--accent-color);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.project-content > p {
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tag {
-    background: rgba(102, 126, 234, 0.2);
-    color: var(--primary-color);
-    padding: 0.4rem 1rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border: 1px solid var(--primary-color);
-}
-
-/* ================================== */
-/* 7. SKILLS SECTION                  */
-/* ================================== */
-.strengths-layout {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid; /* Skills section ko bhi grid banaya */
-    gap: 2rem;
-}
-
-.skill-category {
-    background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.skill-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
-}
-
-.category-header h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.skill-bars {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.skill-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    color: var(--text-primary);
-    font-weight: 600;
-}
-
-.skill-level {
-    color: var(--accent-color);
-    font-size: 0.9rem;
-}
-
-.skill-bar {
-    height: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.skill-progress {
-    height: 100%;
-    background: var(--gradient);
-    width: var(--progress); /* Yeh width HTML mein style="--progress: 90%" se control hogi */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
-    transition: width 1s ease; /* Animation ki jagah simple transition */
-}
-
-.tool-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.tool-tag {
-    background: rgba(102, 126, 234, 0.2);
-    color: var(--accent-color);
-    padding: 0.7rem 1.5rem;
-    border-radius: 20px;
-    font-weight: 600;
-    border: 2px solid var(--primary-color);
-    transition: all 0.3s ease;
-}
-
-.tool-tag:hover {
-    background: rgba(102, 126, 234, 0.4);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-}
-
-.soft-skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-}
-
-.soft-skill-item {
-    text-align: center;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    transition: all 0.3s ease;
-}
-
-.soft-skill-item:hover {
-    background: rgba(102, 126, 234, 0.1);
-    transform: translateY(-5px);
-}
-
-.skill-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.soft-skill-item h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--accent-color);
-}
-
-.soft-skill-item p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-.strengths-highlight {
-    background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 20px;
-    margin-top: 1rem; /* Pehle 3rem tha, ab grid gap handle kar raha hai */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    border-left: 5px solid var(--primary-color);
-}
-
-.strengths-highlight h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.strengths-highlight p {
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 1rem;
-}
-
-/* ================================== */
-/* 8. CONTACT SECTION                 */
-/* ================================== */
 .contact-container {
     max-width: 800px;
     margin: 0 auto;
@@ -611,12 +522,13 @@ body {
 /* Social Media Grid */
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Chhote cards ke liye minmax 120px */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1.5rem;
+    margin-top: 3rem;
 }
 
 .social-card {
-    aspect-ratio: 1; /* Isse card hamesha square (1:1) rahega */
+    aspect-ratio: 1;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -635,41 +547,37 @@ body {
 }
 
 .social-icon {
-    width: 40%; /* Icon ka size thoda adjust kiya */
-    height: 40%;
+    width: 50%;
+    height: 50%;
     margin-bottom: 0.5rem;
 }
 
 .social-name {
     font-weight: 600;
-    font-size: 0.9rem; /* Font size adjust kiya */
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Social Media Colors (Inko nahi hataya kyunki yeh useful hain) */
+/* Social Media Colors */
 .instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
-.facebook { background: linear-gradient(135deg, #4267B2, #5890FF); }
-.youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
-.linkedin { background: linear-gradient(135deg, #0077B5, #00A0DC); }
-.signal { background: linear-gradient(135deg, #3A76F0, #2E5FCC); }
-.whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
-.gmail { background: linear-gradient(135deg, #EA4335, #FBBC05, #34A853, #4285F4); }
-.github { background: linear-gradient(135deg, #333, #666); }
-.snapchat { background: linear-gradient(135deg, #FFFC00, #FFF700); }
-.duolingo { background: linear-gradient(135deg, #58CC02, #4CAF50); }
-.telegram { background: linear-gradient(135deg, #0088cc, #00A0DC); }
-.twitter { background: linear-gradient(135deg, #2b2a2a, #545454); }
-.pinterest { background: linear-gradient(135deg, #fd0328, #FF3B30); }
-.reddit { background: linear-gradient(135deg, #FF4500, #FF5700); }
-.phone { background: linear-gradient(135deg, #34C759, #30B158); }
-.messege { background: linear-gradient(135deg, #0026ff, #006AFF); }
-.other { background: linear-gradient(135deg, #888888, #BBBBBB); }
+        .facebook { background: linear-gradient(135deg, #4267B2, #5890FF); }
+        .youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+        .linkedin { background: linear-gradient(135deg, #0077B5, #00A0DC); }
+        .signal { background: linear-gradient(135deg, #3A76F0, #2E5FCC); }
+        .whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .gmail { background: linear-gradient(135deg, #EA4335, #FBBC05, #34A853, #4285F4); }
+        .github { background: linear-gradient(135deg, #333, #666); }
+        .snapchat { background: linear-gradient(135deg, #FFFC00, #FFF700); }
+        .duolingo { background: linear-gradient(135deg, #58CC02, #4CAF50); }
+        .telegram { background: linear-gradient(135deg, #0088cc, #00A0DC); }
+        .twitter {  background: linear-gradient(135deg, #2b2a2a, #545454); }
+        .pinterest {  background: linear-gradient(135deg, #fd0328, #FF3B30); }
+        .reddit {  background: linear-gradient(135deg, #FF4500, #FF5700); }
+        .phone {  background: linear-gradient(135deg, #34C759, #30B158); }
+        .messege {  background: linear-gradient(135deg, #0026ff, #006AFF); }
+        .other  {  background: linear-gradient(135deg, #888888, #BBBBBB); }
 
-
-/* ================================== */
-/* 9. FOOTER SECTION                  */
-/* ================================== */
+/* Footer */
 .footer {
     background: var(--bg-card);
     text-align: center;
@@ -687,42 +595,33 @@ body {
     color: var(--primary-color);
 }
 
-/* ================================== */
-/* 10. RESPONSIVE DESIGN (MEDIA QUERIES)*/
-/* ================================== */
-@media (max-width: 900px) {
-    .hero-content {
-        grid-template-columns: 1fr; /* Hero content ko single column banaya */
-        text-align: center;
-    }
-
-    .welcome-buttons {
-        justify-content: center; /* Buttons ko center kiya */
-    }
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    /* Mobile Menu ko activate kiya */
     .nav-toggle-label {
-        display: flex; /* Hamburger icon ko dikhaya */
+        display: flex;
     }
     
     .nav-menu {
         position: fixed;
-        top: 80px; /* Navbar ke niche se shuru hoga (20px top + 60px height approx) */
-        right: -100%; /* Shuruaat mein screen ke bahar */
+        top: 70px;
+        right: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 70px);
         background: rgba(26, 26, 46, 0.98);
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        transition: right 0.3s ease; /* Simple slide-in effect */
+        transition: right 0.3s ease;
     }
     
     .nav-toggle:checked ~ .nav-menu {
-        right: 0; /* Checkbox check hone par menu dikhega */
+        right: 0;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
     }
     
     .phone-frame {
@@ -732,6 +631,10 @@ body {
     
     .welcome-text h1 {
         font-size: 2.5rem;
+    }
+    
+    .welcome-buttons {
+        justify-content: center;
     }
     
     .section-title {
@@ -757,3 +660,91 @@ body {
         padding: 2rem 1.5rem;
     }
 }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.4);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .project-tech {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .project-content > p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(102, 126, 234, 0.2);
+            color: var(--primary-color);
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
