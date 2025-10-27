@@ -28,8 +28,6 @@ body {
     overflow-x: hidden;
 }
 
-
-
  HEAD
 .container {
     max-width: 1200px;
@@ -52,16 +50,16 @@ body {
   
         nav {
             background: rgba(var(--surface-rgb), 0.5);   /* Navigation manjhe Disha  */ /* Pardarshi base*/
-            backdrop-filter: blur(25px) saturate(180%); /* he jo aahe blur glass effect la increase karto */
+            backdrop-filter: blur(35px) saturate(190%); /* he jo aahe blur glass effect la increase karto */
             padding: 15px 30px;
             position: fixed; /* Ek Jagah chipka hua */
             width: calc(100% - 40px);
-            top: 20px;
+            top: 25px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;  /* Khaalcha Bhaag ?  */
             display: flex;
-            gap: 15px;
+            gap: 35px;
             border-radius: var(--border-radius-full);
             align-items: center; /*  Madhat */
             border: 1px solid rgba(var(--on-surface-rgb), 0.1);
@@ -84,23 +82,13 @@ body {
     animation: slideDown 0.5s ease;
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: #0026ff;
     padding: 1rem 2rem;
 }
 
@@ -108,9 +96,9 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 2px;
+    -webkit-background-clip: text;   /*  ye line Chat bot se hai */
+    -webkit-text-fill-color: transparent; /* ye bhi line chat bot se hai */
+    letter-spacing: 1px;
 }
 
 .nav-toggle {
@@ -351,28 +339,6 @@ body {
     color: var(--text-secondary);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 /* Section Styles */
@@ -560,22 +526,23 @@ body {
 
 /* Social Media Colors */
 .instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
-        .facebook { background: linear-gradient(135deg, #4267B2, #5890FF); }
-        .youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
-        .linkedin { background: linear-gradient(135deg, #0077B5, #00A0DC); }
-        .signal { background: linear-gradient(135deg, #3A76F0, #2E5FCC); }
-        .whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
-        .gmail { background: linear-gradient(135deg, #EA4335, #FBBC05, #34A853, #4285F4); }
-        .github { background: linear-gradient(135deg, #333, #666); }
-        .snapchat { background: linear-gradient(135deg, #FFFC00, #FFF700); }
-        .duolingo { background: linear-gradient(135deg, #58CC02, #4CAF50); }
-        .telegram { background: linear-gradient(135deg, #0088cc, #00A0DC); }
-        .twitter {  background: linear-gradient(135deg, #2b2a2a, #545454); }
-        .pinterest {  background: linear-gradient(135deg, #fd0328, #FF3B30); }
-        .reddit {  background: linear-gradient(135deg, #FF4500, #FF5700); }
-        .phone {  background: linear-gradient(135deg, #34C759, #30B158); }
-        .messege {  background: linear-gradient(135deg, #0026ff, #006AFF); }
-        .other  {  background: linear-gradient(135deg, #888888, #BBBBBB); }
+ .facebook { background: linear-gradient(135deg, #4267B2, #5890FF); }
+.youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+.linkedin { background: linear-gradient(135deg, #0077B5, #00A0DC); }
+.signal { background: linear-gradient(135deg, #3A76F0, #2E5FCC); }
+.whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+.gmail { background: linear-gradient(135deg, #EA4335, #FBBC05, #34A853, #4285F4); }
+.github { background: linear-gradient(135deg, #333, #666); }
+.snapchat { background: linear-gradient(135deg, #FFFC00, #FFF700); }
+.duolingo { background: linear-gradient(135deg, #58CC02, #4CAF50); }
+.telegram { background: linear-gradient(135deg, #0088cc, #00A0DC); }
+.twitter {  background: linear-gradient(135deg, #2b2a2a, #545454); }
+.pinterest {  background: linear-gradient(135deg, #fd0328, #FF3B30); }
+.reddit {  background: linear-gradient(135deg, #FF4500, #FF5700); }
+.phone {  background: linear-gradient(135deg, #34C759, #30B158); }
+.messege {  background: linear-gradient(135deg, #0026ff, #006AFF); }
+.aratai { background: linear-gradient(135deg, #e1ff01, #dff34b);}
+.other  {  background: linear-gradient(135deg, #888888, #BBBBBB); }
 
 /* Footer */
 .footer {
@@ -595,71 +562,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-toggle-label {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: rgba(26, 26, 46, 0.98);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        transition: right 0.3s ease;
-    }
-    
-    .nav-toggle:checked ~ .nav-menu {
-        right: 0;
-    }
-    
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .phone-frame {
-        width: 250px;
-        height: 500px;
-    }
-    
-    .welcome-text h1 {
-        font-size: 2.5rem;
-    }
-    
-    .welcome-buttons {
-        justify-content: center;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .welcome-text h1 {
-        font-size: 2rem;
-    }
-    
-    .subtitle {
-        font-size: 1.2rem;
-    }
-    
-    .phone-frame {
-        width: 200px;
-        height: 400px;
-    }
-    
-    .contact-container {
-        padding: 2rem 1.5rem;
-    }
-}
 
         .section-subtitle {
             text-align: center;
