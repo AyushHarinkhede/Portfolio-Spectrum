@@ -48,7 +48,7 @@ body::before {
     width: 100%;
     height: 100%;
     
-    /* Apni image ka URL yahaan daalein */
+    /* image ka url */
     background: url('Image2.jpg') no-repeat center center/cover;
     
     /* Yahaan blur effect lagayenge (aap '3px' ko kam ya zyada kar sakte hain) */
@@ -106,7 +106,7 @@ h1 {
         }
   
         nav {
-            background: rgba(var(--surface-rgb), 0.5);   /* Navigation manjhe Disha  */ /* Pardarshi base*/
+          background: rgba(var(--surface-rgb), 0.5);   /* Navigation manjhe Disha  */ /* Pardarshi base*/
             backdrop-filter: blur(35px) saturate(190%); /* he jo aahe blur glass effect la increase karto */
             padding: 15px 30px;
             position: fixed; /* Ek Jagah chipka hua */
@@ -119,8 +119,8 @@ h1 {
             gap: 35px;
             border-radius: var(--border-radius-full);
             align-items: center; /*  Madhat */
-            border: 1px solid rgba(var(--on-surface-rgb), 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.2); /* Kadi kadi Parchaahi */
+            border: 2px solid rgba(var(--on-surface-rgb), 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.644), inset 0 1px 0 0 rgba(255, 255, 255, 0.2); /* Kadi kadi Parchaahi */
             transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
         }
 
@@ -133,7 +133,7 @@ h1 {
     box-shadow: #0a0a0a 0 8px 32px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset  ;
     border-radius: 45px;
     border: 1px solid rgba(var(--on-surface-rgb), 0.1);
-    top: 0;
+    top: 0.5rem;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     animation: slideDown 0.5s ease;
@@ -161,21 +161,6 @@ h1 {
 .nav-toggle {
     display: none;
 }
-
-.nav-toggle-label {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.nav-toggle-label span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-primary);
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
 .nav-menu {
     display: flex;
     list-style: none;
@@ -206,7 +191,7 @@ h1 {
 
 .nav-menu a:hover::before,
 .nav-menu a.active::before {
-    width: 80%;
+    width: 80%; /* isa istemaal nav bar ke ilements ko indicate karne ke iye hai*/
 }
 
 .nav-menu a:hover,
