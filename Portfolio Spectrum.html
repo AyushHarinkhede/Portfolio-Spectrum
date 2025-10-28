@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Long Scrollable Website</title>
+        <link rel="icon" type="image/png" href="Shinchan.png"> <!-- Tab saathi patchitra-->
+        <link rel="stylesheet" href="Portfolio Spectrum.css"> <!--HTML aaani CSS la Jodnara Thekedaar-->
+    <title>Ayush Harinkhede - Portfolio Spectrum</title>
     
     <style>
         /* Doodle art from Google Font */
@@ -205,6 +207,25 @@ background-color: #333;
  .chitra-placeholder:active {
             transform: scale(0.96); /* Thoda chota ho jayega */
         }
+/* Footer */
+.footer {
+    background: var(--bg-card);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.footer p {
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+}
+
+.footer-tagline {
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+
 
  </style>
 
@@ -274,6 +295,15 @@ background-color: #333;
 <div class="chitra-placeholder">
                     Side Image Yahan
                 </div></div></div></div>
+
+                <!-- Footer -->
+     <footer style="text-align: center; padding: 40px 0; color: var(--text-secondary); margin-top: 60px;">
+            <p style="font-size: calc(14px * var(--font-size-multiplier));">© 2024-2025 Portfolio Spectrum. Made with ❤️</p> <!--mera pehla pyar temhare liye -->
+            <p style="font-size: calc(12px * var(--font-size-multiplier)); margin-top: 10px;">Creative | Innovative | Passionate</p> <!--Ye to mujheee pata hi nahi tha ki ye me hu -->
+                         <a href="#" onclick="openModal('privacyPolicyModal')" data-key="footerPrivacy">Privacy Policy</a> | <!-- aapki privacy aapke haathme hamare gale mat padho-->
+            <a href="#" onclick="openModal('termsOfServiceModal')" data-key="footerTerms">Terms of Service</a> <!-- Term koi bhi ho hamare ruel har waqt change hote hai to koi bolbol nahi chup chaap rehne ka-->
+            <p style="font-size: calc(12px * var(--font-size-multiplier)); margin-top: 10px;">All Right's Reserved by <b><i>Ayush Harinkhede</i></b></p> <!--jaaydaad apne  naam hai babua -->
+        </footer>
 
 </Body>
 </html>
