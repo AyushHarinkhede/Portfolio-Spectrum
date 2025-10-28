@@ -3,7 +3,9 @@
 <head>
      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="Shinchan.png"> <title>Ayush Harinkhede - Portfolio Spectrum</title>
+        <link rel="icon" type="image/png" href="Shinchan.png"> <!-- Tab saathi patchitra-->
+    
+    <title>Ayush Harinkhede - Portfolio Spectrum</title>
     
     <style>  /* HTML aaani CSS la Jodnara Thekedaar*/
         /* Doodle art from Google Font */
@@ -25,19 +27,15 @@ html {
    scroll-behavior: smooth; /* Smooth scrolling ke liye */
 }
 
-/* User ka .body class selector tha, use Body tag selector se replace kiya */
-Body {
-    /* Off-white / Creamy background */
-    /* Text ka halka dark colour */
-    font-family: Arial, sans-serif; /* Default font */
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    
-    /* FIX 1: Background ko scrollable banane ke liye parent ko relative banana zaroori hai */
-    position: relative; 
+.body {
+/* Off-white / Creamy background */
+/* Text ka halka dark colour */
+font-family: Arial, sans-serif; /* Default font */
+margin: 0;
+padding: 0;
+background-color: #333;
 
-    /* image ka url */
+ /* image ka url */
     /* background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg1.jpg"') no-repeat center center/cover;
       background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg2.jpg"') no-repeat center center/cover;
         background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg3.jpg"') no-repeat center center/cover;
@@ -52,26 +50,24 @@ Body::before {
     
     content: ''; 
 
-    /* PROBLEM 1 FIX: 'fixed' ki jagah 'absolute' karein */
+    /* Background ko scrollable banane ke liye absolute use karo */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    
-    /* '100vh' (viewport height) ki jagah '100%' (full body height) karein */
     height: 100%; 
-    
     background: url('imgbg1.png') center/cover;
-    filter: blur(3px); /* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
     z-index: -2; 
 }
 
          
 /* Poori website ka main wrapper */
-#mukhiya {
+#mukhya-wrapper {
     width: 90%;
     max-width: 1000px;
     margin: 20px auto; /* Page ko center mein laane ke liye */
+    position: relative;
+    z-index: 1;
 }
 
 /* Har section ke beech ka title */
@@ -82,25 +78,24 @@ Body::before {
     font-family: 'Caveat';
 }
 
-/* FIX 2: Text aur Phone ko side-by-side laane ke liye NAYA Grid Container */
-.header-grid-container {
+/* Grid system for heading and phone */
+.header-grid {
     display: grid;
-    grid-template-columns: 1fr 280px; /* 1fr = bachi hui jagah, 280px = phone ki width */
-    gap: 30px; /* Beech mein gap */
-    align-items: center; /* Vertically center */
-    padding: 20px 0; /* Thoda upar-neeche space */
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-/* Text ko align karne ke liye (Optional, par behtar dikhega) */
-.header-grid-container .font-showcase {
-    text-align: right;
-}
-/* Phone ke text ko align karne ke liye */
-.header-grid-container .font-showcase .Sarpanch {
-    text-align: right;
-    margin-bottom: 0; /* Extra margin hataya */
+.header-text {
+    text-align: left;
 }
 
+.header-text h2 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff;
+}
 
 #phone-container {
     width: 280px;  /* Phone ki chaudai */
@@ -108,17 +103,13 @@ Body::before {
     
     border: 12px solid #333; /* Phone ka border (bezel) */
     border-radius: 40px; /* Phone ke rounded corners */
-    
-    /* FIX 2: Grid me use hone par '1px' margin ki zaroorat nahi */
-    margin: 0; 
-    
+    margin: 0; /* Isse position par fark nahi padega */
     padding: 0px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.656);
     display: flex;
     
-    /* FIX: 'right' koi valid value nahi hai. 'center' sahi hai. */
-    justify-content: right;
-    align-items: right;
+    justify-content: center;
+    align-items: center;
     
     box-sizing: border-box;
 }
@@ -148,19 +139,18 @@ Body::before {
 
 
 
-/* Circle gallery ka container */
+/* Circle gallery ka container - 4 circles ke liye */
  .circle-gallery {
             display: flex;
             justify-content: space-around; /* Circles ko barabar failane ke liye */
             flex-wrap: wrap; /* Mobile par neeche aa jayenge */
             margin-top: 30px;
-            gap: 0px; /* Circles ke beech gap */
+            gap: 15px; /* Circles ke beech gap kam kiya */
         }
 
 /* Ek single circle item */
  .chhota-container {
             text-align: center;
-            /* FIX 3: Gap kam karne ke liye margin 20px se 10px kiya */
             margin: 10px;
         }
 
@@ -250,53 +240,69 @@ Body::before {
             transform: scale(0.96); /* Thoda chota ho jayega */
         }
 
-/* FIX 3: Naya FAQ Section (Que) ke liye Styles */
-.faq-container {
-    max-width: 800px; /* Section ki max chaudai */
-    margin: 0 auto; /* Center mein laane ke liye */
-}
-.faq-item {
-    border: 2px dotted #c9c3b7; /* Dotted border */
+/* FAQ Section Styling */
+.faq-section {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    margin-bottom: 15px;
-    background: rgba(255, 255, 255, 0.05); /* Halka sa background */
-}
-.faq-item summary {
-    font-size: 1.5em; /* Sawaal ka font size */
-    color: #a09a8f;
-    padding: 15px 20px;
-    cursor: pointer;
-    list-style: none; /* Default arrow hatane ke liye */
-    position: relative;
-}
-.faq-item summary::-webkit-details-marker {
-    display: none; /* Default arrow (Chrome) */
-}
-/* Plus (+) icon add kiya */
-.faq-item summary::after {
-    content: '+';
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2em;
-    font-family: Arial, sans-serif;
-    transition: transform 0.2s;
-    color: #c9c3b7;
-}
-/* Jab khulega toh icon minus (-) ban jayega */
-.faq-item[open] summary::after {
-    content: '−'; /* Ye minus sign hai */
-}
-/* Jawaab (Answer) ke liye style */
-.faq-item p {
-    font-size: 1.2em;
-    color: #c9c3b7;
-    padding: 0 20px 20px 20px;
-    margin: 0;
-    line-height: 1.6;
 }
 
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #c9c3b7;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    background-color: rgba(201, 195, 183, 0.3);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgba(201, 195, 183, 0.5);
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.faq-toggle {
+    font-size: 2em;
+    color: #c9c3b7;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    color: #e0e0e0;
+    font-size: 1.2em;
+}
+
+.faq-checkbox {
+    display: none;
+}
+
+.faq-checkbox:checked ~ .faq-answer {
+    max-height: 500px;
+    padding: 15px;
+}
+
+.faq-checkbox:checked ~ .faq-question .faq-toggle {
+    transform: rotate(45deg);
+}
 
 /* Footer */
 .footer {
@@ -312,20 +318,19 @@ Body::before {
 <Body>
  
 
-    <div id="mukhiya">
-        <div class="header-grid-container">
-            
-            <div class="font-showcase">
-                <h2 class="Sarpanch font-f4">Hii My Name is Ayush Harinkhede</h2>
+    <!-- http://localhost:5500/Portfolio%20Spectrum.html -->
+
+    <div id="mukhya-wrapper">
+        
+        <!-- Grid system for heading and phone -->
+        <div class="header-grid">
+            <div class="header-text">
+                <h2 class="font-f4">Hii My Name is Ayush Harinkhede</h2>
             </div>
-            
             <div id="phone-container">
-                <div id="phone-screen">
-                </div>
+                <div id="phone-screen"></div>
             </div>
-        
-        </div><br><br><br><br>
-        
+        </div>
 
  <div class="bhaag">
     <h2 class="Sarpanch font-f2">Font Styles</h2>
@@ -348,14 +353,14 @@ Body::before {
                     <p class="chhota-text font-f1">Project ka Naam</p>
                 </div>
                 
-                <div class="chhota-container">
-                    <div class="dotted-circle">
-                        <div class="circle-image"></div>
+  <div class="chhota-container">
+     <div class="dotted-circle">
+           <div class="circle-image"></div>
                     </div>
                     <p class="chhota-text font-f1">Hobby ka Naam</p>
                 </div>
                 
-                <div class="chhota-container">
+      <div class="chhota-container">
                     <div class="dotted-circle">
                         <div class="circle-image"></div>
                     </div>
@@ -366,34 +371,10 @@ Body::before {
                     <div class="dotted-circle">
                         <div class="circle-image"></div>
                     </div>
-                    <p class="chhota-text font-f1">Chautha Item</p>
+                    <p class="chhota-text font-f1">Naya Item</p>
                 </div>
-            
-            </div>  </div><br><br><br><br>
-            
-            
-        <div class="bhaag">
-            <h2 class="Sarpanch font-f2">Kuch Sawaal (FAQ)</h2>
-            <div class="faq-container">
                 
-                <details class="faq-item">
-                    <summary class="font-f1">Aapka pehla sawaal yahan?</summary>
-                    <p class="font-f3">Pehle sawaal ka jawaab. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="font-f1">Aapka dusra sawaal yahan?</summary>
-                    <p class="font-f3">Dusre sawaal ka jawaab. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="font-f1">Aapka teesra sawaal yahan?</summary>
-                    <p class="font-f3">Teesre sawaal ka jawaab. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                </details>
-
-            </div>
-        </div><br><br><br><br>
-        
+  </div>  </div><br><br><br><br>
         
 <div class="bhaag">
             <h2 class="Sarpanch font-f2">Mera Safar</h2>
@@ -406,10 +387,67 @@ Body::before {
  </div>
                 
 <div class="chitra-placeholder">
-     Side Image Yahan  </div></div></div></div><br><br><br><br>
+     Side Image Yahan  </div></div></div>
 
-                <footer style="text-align: center; padding: 40px 0; color: var(--text-secondary); margin-top: 60px;">
-            <p class="font-f1">© 2024-2025 Portfolio Spectrum. Made with ❤️</p> <p class="font-f3">Creative | Innovative | Passionate</p> <a href="#" onclick="openModal('privacyPolicyModal')" data-key="footerPrivacy">Privacy Policy</a> | <a href="#" onclick="openModal('termsOfServiceModal')" data-key="footerTerms">Terms of Service</a> <p class="font-f1">All Right's Reserved by <b><i>Ayush Harinkhede</i></b></p> </footer>
+<!-- FAQ Section -->
+<div class="faq-section">
+    <h2 class="Sarpanch font-f2">Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+        <input type="checkbox" id="faq1" class="faq-checkbox">
+        <label for="faq1" class="faq-question">
+            <h3 class="font-f1">Tumhara Experience Kya Hai?</h3>
+            <span class="faq-toggle">+</span>
+        </label>
+        <div class="faq-answer font-f3">
+            <p>Main ek passionate developer hoon jo web development aur design mein expertise rakhta hoon. Mere paas kaafi projects ka experience hai jo modern technologies use karte hain.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <input type="checkbox" id="faq2" class="faq-checkbox">
+        <label for="faq2" class="faq-question">
+            <h3 class="font-f1">Tum Kaunse Technologies Use Karte Ho?</h3>
+            <span class="faq-toggle">+</span>
+        </label>
+        <div class="faq-answer font-f3">
+            <p>Main HTML, CSS, JavaScript, React, Node.js aur modern frameworks use karta hoon. Responsive design aur user experience pe focus karta hoon.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <input type="checkbox" id="faq3" class="faq-checkbox">
+        <label for="faq3" class="faq-question">
+            <h3 class="font-f1">Portfolio Projects Kaise Banate Ho?</h3>
+            <span class="faq-toggle">+</span>
+        </label>
+        <div class="faq-answer font-f3">
+            <p>Main pehle planning karta hoon, phir design create karta hoon, aur finally development mein implement karta hoon. Har project mein creativity aur functionality ka balance maintain karta hoon.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <input type="checkbox" id="faq4" class="faq-checkbox">
+        <label for="faq4" class="faq-question">
+            <h3 class="font-f1">Tumse Kaise Contact Kar Sakte Hain?</h3>
+            <span class="faq-toggle">+</span>
+        </label>
+        <div class="faq-answer font-f3">
+            <p>Tum mujhe email ke through ya social media platforms par contact kar sakte ho. Main har genuine inquiry ka reply zaroor karta hoon.</p>
+        </div>
+    </div>
+</div>
+
+</div><br><br><br><br>
+
+                <!-- Footer -->
+     <footer style="text-align: center; padding: 40px 0; color: var(--text-secondary); margin-top: 60px;">
+            <p class="font-f1">© 2024-2025 Portfolio Spectrum. Made with ❤️</p> <!--mera pehla pyar temhare liye -->
+            <p class="font-f3">Creative | Innovative | Passionate</p> <!--Ye to mujheee pata hi nahi tha ki ye me hu -->
+                         <a href="#" onclick="openModal('privacyPolicyModal')" data-key="footerPrivacy">Privacy Policy</a> | <!-- aapki privacy aapke haathme hamare gale mat padho-->
+            <a href="#" onclick="openModal('termsOfServiceModal')" data-key="footerTerms">Terms of Service</a> <!-- Term koi bhi ho hamare ruel har waqt change hote hai to koi bolbol nahi chup chaap rehne ka-->
+            <p class="font-f1">All Right's Reserved by <b><i>Ayush Harinkhede</i></b></p> <!--jaaydaad apne naam hai babua -->
+        </footer>
 
 </Body>
 </html>
