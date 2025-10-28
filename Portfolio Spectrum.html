@@ -47,19 +47,16 @@ background-color: #333;
      /* z-index: -2; ye hoga sabse piche */
 }
 Body::before {
-    /* PROBLEM 2 FIX: Yahan 'centre' likha tha, jisse woh text aa raha tha.
-       Ise hamesha khaali ('') rakhein. */
-    content: ''; 
     
+    content: ''; 
+
     /* PROBLEM 3 FIX: 'absolute' ki jagah 'fixed' karein */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    
-    /* PROBLEM 3 FIX: '100%' ki jagah '100vh' (viewport height) karein */
     height: 100vh; 
-    background: url('imgbg2.jpg') center/cover;
+    background: url('imgbg1.png') center/cover;
     z-index: -2; 
 }
 
