@@ -46,75 +46,82 @@ background-color: #333;
      filter: blur(3px); /* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
      /* z-index: -2; ye hoga sabse piche */
 }
-body::before {
-    content: 'centre'; /* Pseudo-element ke liye zaroori hai */
-    position: absolute;
+Body::before {
+    /* PROBLEM 2 FIX: Yahan 'centre' likha tha, jisse woh text aa raha tha.
+       Ise hamesha khaali ('') rakhein. */
+    content: ''; 
+    
+    /* PROBLEM 3 FIX: 'absolute' ki jagah 'fixed' karein */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     
-
-    background: url('imgbg1.jpg') no-repeat center/cover;    /* image ka url */
-   z-index: -2;   /* kuch bhi hojae sabse piche rakhna hai iske throught */
+    /* PROBLEM 3 FIX: '100%' ki jagah '100vh' (viewport height) karein */
+    height: 100vh; 
+    background: url('imgbg2.jpg') center/cover;
+    z-index: -2; 
 }
 
          
 /* Poori website ka main wrapper */
 #mukhya-wrapper {
-            width: 90%;
-            max-width: 1000px;
-            margin: 20px auto; /* Page ko center mein laane ke liye */
-        }
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto; /* Page ko center mein laane ke liye */
+}
 
 /* Har section ke beech ka title */
 .Sarpanch {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            /* Yahan hum F2 doodle font ka istemal kar rahe hain */
-            font-family: 'Caveat';
-        }
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-family: 'Caveat';
+}
 
 #phone-container {
-            width: 280px;  /* Phone ki chaudai */
-            height: 550px; /* Phone ki lambai */
-            
-            border: 12px solid #333; /* Phone ka border (bezel) */
-            border-radius: 40px; /* Phone ke rounded corners */
-            margin: 1px; /* right mein laane ke liye by 1px */
-            padding: 0px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.656);
-            display: flex;
-            justify-content: right;
-            align-items: right;
-            box-sizing: border-box;
-            
-        }
+    width: 280px;  /* Phone ki chaudai */
+    height: 550px; /* Phone ki lambai */
+    
+    border: 12px solid #333; /* Phone ka border (bezel) */
+    border-radius: 40px; /* Phone ke rounded corners */
+    margin: 1px; /* Isse position par fark nahi padega */
+    padding: 0px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.656);
+    display: flex;
+    
+    /* FIX: 'right' koi valid value nahi hai. 
+       Aap 'center' ya 'flex-end' istemal kar sakte hain. */
+    justify-content: center;
+    align-items: center;
+    
+    box-sizing: border-box;
+}
 
   /* Phone ke andar ka screen area (yahan photo lagegi) */
  #phone-screen {
-            width: 100%;
-            height: 100%;
-          /* Screen ka creamy colour */
-            border-radius: 25px; /* Screen ke inner corners */
-        }
+    width: 100%;
+    height: 100%;
+    border-radius: 25px; /* Screen ke inner corners */
+}
 
 /* Photo daalne ke liye css: */
 #phone-screen {
-               background-image: url('Image1.jpg');
-               background-size: cover;
-               background-position: center;
-           }
+   background-image: url('Image1.jpg');
+   background-size: cover;
+   background-position: center;
+}
        
 .font-showcase {
-            text-align: center;
-        }
+    text-align: center;
+}
 .font-showcase p {
-            font-size: 1.8em;
-            color: #666;
-            margin: 10px;
-        }
+    font-size: 1.8em;
+    color: #666;
+    margin: 10px;
+}
+
+
 
 /* Circle gallery ka container */
  .circle-gallery {
@@ -182,9 +189,12 @@ body::before {
 
  /* Text wala hissa */
  .paath {
-            flex: 1; /* Barabar space lega */
+   
+    flex: 3; /* Barabar space lega */
             min-width: 250px;
             line-height: 1.6;
+            align-items: right;
+  
         }
 
 /* Image wala hissa */
@@ -232,7 +242,7 @@ body::before {
 
  <div class="bhaag">
     <div class="font-showcase">
-             <h2 class="Sarpanch font-f4">Hii My Name is Ayush Harinkhed</h2>
+             <h2 class="Sarpanch font-f4">Hii My Name is Ayush Harinkhede</h2>
     </div></div>
             
             
