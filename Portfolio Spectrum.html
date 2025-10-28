@@ -93,3 +93,47 @@ z-index: -2;
             color: #b0a99c;
             font-family: 'Patrick Hand', cursive; /* F1 font */
         }
+
+/* Photo daalne ke liye css: */
+#phone-screen {
+               background-image: url('imgbg.jpg');
+               background-size: cover;
+               background-position: center;
+           }
+       
+.font-showcase {
+            text-align: center;
+        }
+.font-showcase p {
+            font-size: 1.8em;
+            color: #666;
+            margin: 10px;
+        }
+
+/* Circle gallery ka container */
+ .circle-gallery {
+            display: flex;
+            justify-content: space-around; /* Circles ko barabar failane ke liye */
+            flex-wrap: wrap; /* Mobile par neeche aa jayenge */
+            margin-top: 30px;
+        }
+
+/* Ek single circle item */
+ .chhota-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+/* Dotted circle (outer) */
+ .dotted-circle {
+            width: 160px;
+            height: 160px;
+            border: 3px dotted #c9c3b7; /* Dotted line (off-type colour) */
+            border-radius: 50%; /* Circle shape */
+            padding: 8px; /* Dotted line aur image ke beech gap */
+            box-sizing: border-box;
+            
+            /* Tap Animation */
+            transition: transform 0.1s ease-out;
+            cursor: pointer;
+        }
