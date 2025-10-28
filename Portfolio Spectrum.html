@@ -22,7 +22,7 @@
 
         /* ===== 2. BASIC PAGE SETUP ===== */
 html {
-scroll-behavior: smooth; /* Smooth scrolling ke liye */
+   scroll-behavior: smooth; /* Smooth scrolling ke liye */
 }
 
 .Body {
@@ -40,11 +40,9 @@ background-color: #333;
           background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg4.jpg"') no-repeat center center/cover;
             background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg5.jpg"') no-repeat center center/cover;
     
-/* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
-filter: blur(3px);
-    
-/* ye hoga sabse piche */
-z-index: -2;
+
+     filter: blur(3px); /* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
+     z-index: -2; /* ye hoga sabse piche */
 }
            
 /* Poori website ka main wrapper */
@@ -137,3 +135,75 @@ z-index: -2;
             transition: transform 0.1s ease-out;
             cursor: pointer;
         }
+
+ /* Image placeholder (inner circle) */
+ .circle-image {
+            width: 100%;
+            height: 100%;
+           /* Thoda alag creamy colour */
+            border-radius: 50%;
+            /* Placeholder text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #b0a99c;
+            font-size: 1.2em;
+            font-family: 'Patrick Hand', cursive; /* F1 font */
+        }
+
+ /* Yahan bhi image dalne ke liye css: */
+/* .circle-image {
+               background-image: url('circle-image.jpg');
+               background-size: cover;
+           }
+        */
+
+  /* Circle ke niche ka chota text */
+.chhota-text {
+            margin-top: 15px;
+            color: #a09a8f; /* Off-type colour */
+            font-size: 1.8em;
+        }
+
+  .side-by-side-container {
+            display: flex;
+            gap: 30px; /* Beech mein gap */
+            align-items: center;
+            flex-wrap: wrap; /* Mobile friendly */
+        }
+
+ /* Text wala hissa */
+ .paath {
+            flex: 1; /* Barabar space lega */
+            min-width: 250px;
+            line-height: 1.6;
+        }
+
+/* Image wala hissa */
+ .chitra-placeholder {
+            flex: 1;
+            min-width: 250px;
+            height: 300px;
+            border-radius: 8px;
+            
+            /* Placeholder text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #b0a99c;
+            font-size: 1.5em;
+            font-family: 'Patrick Hand', cursive; /* F1 font */
+            
+            /* Tap Animation */
+            transition: transform 0.1s ease-out;
+            cursor: pointer;
+        }
+        
+     
+  /* Jab bhi .dotted-circle ya .chitra-placeholder par click (tap) hoga */
+  .dotted-circle:active,
+ .chitra-placeholder:active {
+            transform: scale(0.96); /* Thoda chota ho jayega */
+        }
+
+ </style>
