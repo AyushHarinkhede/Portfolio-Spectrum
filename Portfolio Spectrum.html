@@ -4,10 +4,10 @@
      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="Shinchan.png"> <!-- Tab saathi patchitra-->
-        <link rel="stylesheet" href="Portfolio Spectrum.css"> <!--HTML aaani CSS la Jodnara Thekedaar-->
+    
     <title>Ayush Harinkhede - Portfolio Spectrum</title>
     
-    <style>
+    <style>  /* HTML aaani CSS la Jodnara Thekedaar*/
         /* Doodle art from Google Font */
         @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@400;700&family=Indie+Flower&family=Kalam:wght@300;400&display=swap');
 
@@ -27,7 +27,7 @@ html {
    scroll-behavior: smooth; /* Smooth scrolling ke liye */
 }
 
-.Body {
+.body {
 /* Off-white / Creamy background */
 /* Text ka halka dark colour */
 font-family: Arial, sans-serif; /* Default font */
@@ -36,7 +36,7 @@ padding: 0;
 background-color: #333;
 
  /* image ka url */
-    background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg1.jpg"') no-repeat center center/cover;
+    /* background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg1.jpg"') no-repeat center center/cover;
       background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg2.jpg"') no-repeat center center/cover;
         background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg3.jpg"') no-repeat center center/cover;
           background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg4.jpg"') no-repeat center center/cover;
@@ -44,9 +44,22 @@ background-color: #333;
     
 
      filter: blur(3px); /* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
-     z-index: -2; /* ye hoga sabse piche */
+     /* z-index: -2; ye hoga sabse piche */
 }
-           
+body::before {
+    content: 'centre'; /* Pseudo-element ke liye zaroori hai */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+
+    background: url('imgbg1.jpg') no-repeat center/cover;    /* image ka url */
+   z-index: -2;   /* kuch bhi hojae sabse piche rakhna hai iske throught */
+}
+
+         
 /* Poori website ka main wrapper */
 #mukhya-wrapper {
             width: 90%;
@@ -70,12 +83,13 @@ background-color: #333;
             border: 12px solid #333; /* Phone ka border (bezel) */
             border-radius: 40px; /* Phone ke rounded corners */
             margin: 1px; /* right mein laane ke liye by 1px */
-            padding: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 0px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.656);
             display: flex;
             justify-content: right;
             align-items: right;
             box-sizing: border-box;
+            
         }
 
   /* Phone ke andar ka screen area (yahan photo lagegi) */
@@ -84,19 +98,11 @@ background-color: #333;
             height: 100%;
           /* Screen ka creamy colour */
             border-radius: 25px; /* Screen ke inner corners */
-            
-            /* Placeholder text */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5em;
-            color: #b0a99c;
-            font-family: 'Patrick Hand', cursive; /* F1 font */
         }
 
 /* Photo daalne ke liye css: */
 #phone-screen {
-               background-image: url('imgbg.jpg');
+               background-image: url('Image1.jpg');
                background-size: cover;
                background-position: center;
            }
@@ -116,6 +122,7 @@ background-color: #333;
             justify-content: space-around; /* Circles ko barabar failane ke liye */
             flex-wrap: wrap; /* Mobile par neeche aa jayenge */
             margin-top: 30px;
+            gap: 0px; /* Circles ke beech gap */
         }
 
 /* Ek single circle item */
@@ -128,11 +135,10 @@ background-color: #333;
  .dotted-circle {
             width: 160px;
             height: 160px;
-            border: 3px dotted #c9c3b7; /* Dotted line (off-type colour) */
+            border: 4px dotted #c9c3b7; /* Dotted line (off-type colour) */
             border-radius: 50%; /* Circle shape */
-            padding: 8px; /* Dotted line aur image ke beech gap */
+            padding: 6px; /* Dotted line aur image ke beech gap */
             box-sizing: border-box;
-            
             /* Tap Animation */
             transition: transform 0.1s ease-out;
             cursor: pointer;
@@ -150,15 +156,15 @@ background-color: #333;
             align-items: center;
             color: #b0a99c;
             font-size: 1.2em;
-            font-family: 'Patrick Hand', cursive; /* F1 font */
+            font-family: 'Patrick Hand'; /* F1 font */
         }
 
- /* Yahan bhi image dalne ke liye css: */
-/* .circle-image {
-               background-image: url('circle-image.jpg');
+ /* Yahan bhi image dalne ke liye css: */ 
+ .circle-image {
+               background-image: url('image2.jpg');
                background-size: cover;
            }
-        */
+       
 
   /* Circle ke niche ka chota text */
 .chhota-text {
@@ -232,7 +238,6 @@ background-color: #333;
             
   <div id="phone-container">
                 <div id="phone-screen">
-                    My Picture
                 </div>  </div><br><br><br><br>
 
  <div class="bhaag">
@@ -251,21 +256,21 @@ background-color: #333;
                 
                 <div class="chhota-container">
                     <div class="dotted-circle">
-                        <div class="circle-image">Image 1</div>
+                        <div class="circle-image"></div>
                     </div>
                     <p class="chhota-text font-f1">Project ka Naam</p>
                 </div>
                 
   <div class="chhota-container">
      <div class="dotted-circle">
-           <div class="circle-image">Image 2</div>
+           <div class="circle-image"></div>
                     </div>
                     <p class="chhota-text font-f1">Hobby ka Naam</p>
                 </div>
                 
       <div class="chhota-container">
                     <div class="dotted-circle">
-                        <div class="circle-image">Image 3</div>
+                        <div class="circle-image"></div>
                     </div>
                     <p class="chhota-text font-f1">Kuch Aur</p>
                 </div>  </div>  </div><br><br><br><br>
