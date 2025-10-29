@@ -24,27 +24,43 @@
             scroll-behavior: smooth;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #333;
-            position: relative;
-            min-height: 100vh;
-            color: #4f4f4f;
-        }
+     Body {
+    /* Off-white / Creamy background */
+    /* Text ka halka dark colour */
+    font-family: Arial, sans-serif; /* Default font */
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    
+    /* FIX 1: Background ko scrollable banane ke liye parent ko relative banana zaroori hai */
+    position: relative; 
 
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('imgbg1.png') no-repeat center top;
-            background-size: cover;
-            filter: blur(3px);
-            z-index: -2;
-        }
+    /* image ka url */
+    /* background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg1.jpg"') no-repeat center center/cover;
+      background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg2.jpg"') no-repeat center center/cover;
+        background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg3.jpg"') no-repeat center center/cover;
+          background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg4.jpg"') no-repeat center center/cover;
+            background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg5.jpg"') no-repeat center center/cover;
+    
 
+     filter: blur(3px); /* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
+     /* z-index: -2; ye hoga sabse piche */
+}
+Body::before {
+    
+    content: ''; 
+
+    /* PROBLEM 1 FIX: 'fixed' ki jagah 'absolute' karein */
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    
+    /* '100vh' (viewport height) ki jagah '100%' (full body height) karein */
+    height: 100%;  
+    background: url('imgbg1.png') center/cover;
+    filter: blur(3px); /* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
+}
  #mukhiya {
             width: 90%;
             max-width: 1000px;
@@ -53,7 +69,7 @@
             z-index: 1;
         }
 
-        .Sarpanch {
+   .Sarpanch {
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 10px;
@@ -62,7 +78,7 @@
         }
 
         /* Header with Phone */
-        .header-grid-container {
+ .header-grid-container {
             display: grid;
             grid-template-columns: 5fr 285px;
             gap: 50px;
@@ -70,11 +86,11 @@
             padding: 20px 0;
         }
 
-        .header-grid-container .font-showcase-left {
+.header-grid-container .font-showcase-left {
             text-align: right;
         }
 
-        .header-grid-container .font-showcase-left .Sarpanch {
+ .header-grid-container .font-showcase-left .Sarpanch {
             text-align: right;
             margin-bottom: 0;
         }
@@ -658,12 +674,12 @@
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="Image6.png" alt="VANIE">
+                    <img src="Image6.png" alt="   HealthNest">
                 </div>
                 <div class="project-content">
-                    <h3>VANIE</h3>
+                    <h3>   HealthNest</h3>
                     <p class="project-tech">C | C++ | JavaScript</p>
-                    <p>An AI Platform that runs in integrated server of NPU.</p>
+                    <p>HealthNest is AI Health Platform that runs in integrated server of NPU that monitoring user's real time health data and explaining by VANIE AI Health assist that user easily chat with VANIE and clear their doubt.</p>
                     <div class="project-tags">
                         <span class="tag">Algorithms</span>
                         <span class="tag">Data Structures</span>
