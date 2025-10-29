@@ -1,254 +1,262 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="Shinchan.png"> <title>Ayush Harinkhede - Portfolio Spectrum</title>
+    <link rel="icon" type="image/png" href="Shinchan.png">
+    <title>Ayush Harinkhede - Portfolio Spectrum</title>
     
-    <style>  /* HTML aaani CSS la Jodnara Thekedaar*/
-        /* Doodle art from Google Font */
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@400;700&family=Indie+Flower&family=Kalam:wght@300;400&display=swap');
 
-        /* F1: 'Patrick Hand'
-           F2: 'Caveat'
-           F3: 'Indie Flower'
-           F4: 'Kalam'
-        */
-.font-f1 { font-family: 'Patrick Hand', cursive; }
-.font-f2 { font-family: 'Caveat', cursive; }
-.font-f3 { font-family: 'Indie Flower', cursive; }
-.font-f4 { font-family: 'Kalam', cursive; }
+        .font-f1 { font-family: 'Patrick Hand', cursive; }
+        .font-f2 { font-family: 'Caveat', cursive; }
+        .font-f3 { font-family: 'Indie Flower', cursive; }
+        .font-f4 { font-family: 'Kalam', cursive; }
 
-
-        /* ===== 2. BASIC PAGE SETUP ===== */
-html {
-   scroll-behavior: smooth; /* Smooth scrolling ke liye */
-}
-
-/* User ka .body class selector tha, use Body tag selector se replace kiya */
-Body {
-    /* Off-white / Creamy background */
-    /* Text ka halka dark colour */
-    font-family: Arial, sans-serif; /* Default font */
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    
-    /* FIX 1: Background ko scrollable banane ke liye parent ko relative banana zaroori hai */
-    position: relative; 
-
-    /* image ka url */
-    /* background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg1.jpg"') no-repeat center center/cover;
-      background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg2.jpg"') no-repeat center center/cover;
-        background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg3.jpg"') no-repeat center center/cover;
-          background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg4.jpg"') no-repeat center center/cover;
-            background: url('"C:\Users\AASHU\Pictures\Ayush🍌\Worst file by ayush\imgbg5.jpg"') no-repeat center center/cover;
-    
-
-     filter: blur(3px); /* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
-     /* z-index: -2; ye hoga sabse piche */
-}
-Body::before {
-    
-    content: ''; 
-
-    /* PROBLEM 1 FIX: 'fixed' ki jagah 'absolute' karein */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    
-    /* '100vh' (viewport height) ki jagah '100%' (full body height) karein */
-    height: 100%; 
-    
-    background: url('imgbg1.png') center/cover;
-    filter: blur(3px); /* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
-    z-index: -2; 
-}
-
-         
-/* Poori website ka main wrapper */
-#mukhiya {
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto; /* Page ko center mein laane ke liye */
-}
-
-/* Har section ke beech ka title */
-.Sarpanch {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    font-family: 'Caveat';
-}
-
-/* FIX 2: Text aur Phone ko side-by-side laane ke liye NAYA Grid Container */
-.header-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 280px; /* 1fr = bachi hui jagah, 280px = phone ki width */
-    gap: 30px; /* Beech mein gap */
-    align-items: center; /* Vertically center */
-    padding: 20px 0; /* Thoda upar-neeche space */
-}
-
-/* Text ko align karne ke liye (Optional, par behtar dikhega) */
-.header-grid-container .font-showcase {
-    text-align: right;
-}
-/* Phone ke text ko align karne ke liye */
-.header-grid-container .font-showcase .Sarpanch {
-    text-align: right;
-    margin-bottom: 0; /* Extra margin hataya */
-}
-
-
-#phone-container {
-    width: 280px;  /* Phone ki chaudai */
-    height: 550px; /* Phone ki lambai */
-    
-    border: 12px solid #333; /* Phone ka border (bezel) */
-    border-radius: 40px; /* Phone ke rounded corners */
-    
-    /* FIX 2: Grid me use hone par '1px' margin ki zaroorat nahi */
-    margin: 0; 
-    
-    padding: 0px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.656);
-    display: flex;
-    
-    /* FIX: 'right' koi valid value nahi hai. 'center' sahi hai. */
-    justify-content: right;
-    align-items: right;
-    
-    box-sizing: border-box;
-}
-
-  /* Phone ke andar ka screen area (yahan photo lagegi) */
- #phone-screen {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px; /* Screen ke inner corners */
-}
-
-/* Photo daalne ke liye css: */
-#phone-screen {
-   background-image: url('Image1.jpg');
-   background-size: cover;
-   background-position: center;
-}
-       
-.font-showcase {
-    text-align: center;
-}
-.font-showcase p {
-    font-size: 1.8em;
-    color: #666;
-    margin: 10px;
-}
-
-
-
-/* Circle gallery ka container */
- .circle-gallery {
-            display: flex;
-            justify-content: space-around; /* Circles ko barabar failane ke liye */
-            flex-wrap: wrap; /* Mobile par neeche aa jayenge */
-            margin-top: 30px;
-            gap: 0px; /* Circles ke beech gap */
-        }
-
-/* Ek single circle item */
- .chhota-container {
-            text-align: center;
-            /* FIX 3: Gap kam karne ke liye margin 20px se 10px kiya */
-            margin: 10px;
-        }
-
-/* Dotted circle (outer) */
- .dotted-circle {
-            width: 160px;
-            height: 160px;
-            border: 4px dotted #c9c3b7; /* Dotted line (off-type colour) */
-            border-radius: 50%; /* Circle shape */
-            padding: 6px; /* Dotted line aur image ke beech gap */
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
-            /* Tap Animation */
-            transition: transform 0.1s ease-out;
-            cursor: pointer;
         }
 
- /* Image placeholder (inner circle) */
- .circle-image {
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            position: relative;
+            min-height: 100vh;
+            color: #4f4f4f;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-           /* Thoda alag creamy colour */
-            border-radius: 50%;
-            /* Placeholder text */
+            background: url('imgbg1.png') no-repeat center top;
+            background-size: cover;
+            filter: blur(3px);
+            z-index: -2;
+        }
+
+ #mukhiya {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .Sarpanch {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-family: 'Caveat';
+            color: #333;
+        }
+
+        /* Header with Phone */
+        .header-grid-container {
+            display: grid;
+            grid-template-columns: 5fr 285px;
+            gap: 50px;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .header-grid-container .font-showcase-left {
+            text-align: right;
+        }
+
+        .header-grid-container .font-showcase-left .Sarpanch {
+            text-align: right;
+            margin-bottom: 0;
+        }
+
+ #phone-container {
+            width: 285px;
+            height: 555px;
+            border: 12px solid #333;
+            border-radius: 40px;
+            margin: 0;
+            padding: 0px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.656);
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #b0a99c;
-            font-size: 1.2em;
-            font-family: 'Patrick Hand'; /* F1 font */
+            box-sizing: border-box;
         }
 
- /* Yahan bhi image dalne ke liye css: */ 
- .circle-image {
-               background-image: url('image2.jpg');
-               background-size: cover;
-           }
-       
+ #phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            background-image: url('Image1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
 
-  /* Circle ke niche ka chota text */
-.chhota-text {
-            margin-top: 15px;
-            color: #a09a8f; /* Off-type colour */
+        /* Info Grid - 3 Columns */
+     .info-grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0;
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            align-items: start;
+               border-radius: 15px;
+            padding: 20px 0;
+        }
+
+        .info-grid-container .font-showcase-left {
+            text-align: left;
+            font-size: 1em;
+            padding: 0 20px;
+            border-right: 4px dotted #aaaaaa;
+        }
+
+        .info-grid-container .font-showcase-center {
+            text-align: left;
+            font-size: 1em;
+            padding: 0 20px;
+            border-right: 4px dotted #aaaaaa;
+        }
+
+        .info-grid-container .font-showcase-right {
+            text-align: left;
+            font-size: 1em;
+            padding: 0 20px;
+        }
+
+        .info-grid-container h3 {
             font-size: 1.8em;
+            color: #333;
+            margin-bottom: 15px;
+            font-family: 'Caveat';
         }
 
-  .side-by-side-container {
-            display: flex;
-            gap: 30px; /* Beech mein gap */
-            align-items: center;
-            flex-wrap: wrap; /* Mobile friendly */
+        .info-grid-container p {
+            font-size: 1em;
+            color: #4f4f4f;
+            margin: 8px 0;
+            text-align: left;
+            line-height: 1.5;
         }
-
- /* Text wala hissa */
- .paath {
+ 
    
-    flex: 3; /* Barabar space lega */
-            min-width: 250px;
-            line-height: 1.6;
-            align-items: right;
-  
-        }
 
-/* Image wala hissa */
- .chitra-placeholder {
-            flex: 1;
-            min-width: 250px;
-            height: 300px;
-            border-radius: 8px;
-            
-            /* Placeholder text */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #b0a99c;
-            font-size: 1.5em;
-            font-family: 'Patrick Hand', cursive; /* F1 font */
-            
-            /* Tap Animation */
-            transition: transform 0.1s ease-out;
-            cursor: pointer;
-        }
-        
-     
-  /* Jab bhi .dotted-circle ya .chitra-placeholder par click (tap) hoga */
-  .dotted-circle:active,
- .chitra-placeholder:active {
-            transform: scale(0.96); /* Thoda chota ho jayega */
-        }
+/* Circle gallery ka container */
+.circle-gallery {
+    display: flex;
+    flex-direction: column; /* Vertical layout - ek ke neeche ek */
+    align-items: flex-start; /* Left align */
+    margin-top: 30px;
+    gap: 40px; /* Circles ke beech vertical gap */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Ek single circle item - ab horizontal layout */
+.chhota-container {
+    display: flex;
+    align-items: center; /* Vertical center alignment */
+    gap: 30px; /* Circle aur text ke beech gap */
+    width: 100%;
+}
+
+/* Dotted circle (outer) */
+.dotted-circle {
+    flex-shrink: 0; /* Circle ka size fixed rahega */
+    width: 160px;
+    height: 160px;
+    border: 4px dotted #c9c3b7;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    transition: transform 0.1s ease-out;
+    cursor: pointer;
+}
+
+/* Image placeholder (inner circle) */
+.circle-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b0a99c;
+    font-size: 1.2em;
+    font-family: 'Patrick Hand';
+    background-image: url('image2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Circle ke side ka text - ab margin-top nahi chahiye */
+.chhota-text {
+    flex: 1; /* Bacha hua space le lega */
+    color: #a09a8f;
+    font-size: 1.8em;
+    line-height: 1.4;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .chhota-container {
+        flex-direction: column; /* Mobile par circle upar, text neeche */
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .chhota-text {
+        font-size: 1.4em;
+    }
+}
+
+/* Baaki ka CSS same rahega */
+.side-by-side-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.paath {
+    flex: 3;
+    min-width: 250px;
+    line-height: 1.6;
+}
+
+.chitra-placeholder {
+    flex: 1;
+    min-width: 250px;
+    height: 300px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b0a99c;
+    font-size: 1.5em;
+    font-family: 'Patrick Hand', cursive;
+    transition: transform 0.1s ease-out;
+    cursor: pointer;
+}
+
+.dotted-circle:active,
+.chitra-placeholder:active {
+    transform: scale(0.96);
+}
 
 /* FIX 3: Naya FAQ Section (Que) ke liye Styles */
 .faq-container {
@@ -298,81 +306,390 @@ Body::before {
 }
 
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 40px 0;
-    color: var(--text-secondary);
-    margin-top: 60px;
-}
+        /* About Me Section */
+        .about-section {
+               padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
 
- </style>
+        .about-section h3 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Caveat';
+        }
 
- </head>
-<Body>
- 
+        .about-section p {
+            font-size: 1.1em;
+            color: #4f4f4f;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
 
+       
+       
+        /* Projects/Creations */
+ .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+  .project-card {
+                          border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+ .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-image {
+         width: 100%;
+         height: 200px;
+            overflow: hidden;
+        }
+
+  .project-image img {
+       width: 100%;
+         height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+            font-family: 'Caveat';
+        }
+
+        .project-tech {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #4f4f4f;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        /* Social Media Section */
+        .social-section {
+                          padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .social-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Caveat';
+            color: #333;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .social-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .social-name {
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        /* Social Media Colors */
+        .instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .facebook { background: #1877f2; }
+        .youtube { background: #ff0000; }
+        .linkedin { background: #0077b5; }
+        .signal { background: #3a76f0; }
+        .whatsapp { background: #25d366; }
+        .gmail { background: #ea4335; }
+        .github { background: #333; }
+        .snapchat { background: #fffc00; }
+        .snapchat .social-name { color: #333; }
+        .duolingo { background: #58cc02; }
+        .telegram { background: #0088cc; }
+        .twitter { background: #000; }
+        .pinterest { background: #e60023; }
+        .reddit { background: #ff4500; }
+        .messege { background: #0084ff; }
+        .phone { background: #34c759; }
+        .arattai { background: #2B4162; }
+        .other-app { background: #6B7280; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #3f3f3f;
+            margin-top: 60px;
+           
+            border-radius: 15px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: #070158;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .header-grid-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .header-grid-container .font-showcase-left {
+                text-align: center;
+            }
+
+            .header-grid-container .font-showcase-left .Sarpanch {
+                text-align: center;
+            }
+
+            #phone-container {
+                margin: 0 auto;
+            }
+
+            .info-grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid-container .font-showcase-left,
+            .info-grid-container .font-showcase-center {
+                border-right: none;
+                border-bottom: 4px dotted #aaaaaa;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
     <div id="mukhiya">
+        <!-- Header Section with Phone -->
         <div class="header-grid-container">
-            
-            <div class="font-showcase">
-                <h2 class="Sarpanch font-f4">Hii My Name is Ayush Harinkhede</h2>
+            <div class="font-showcase-left">
+                <h2 class="Sarpanch font-f1"><b><i>Hi, I am Ayush Harinkhede</i></b></h2>
+                <p class="font-f1"><i>Creative | Innovative | Passionate</i></p>
             </div>
             
             <div id="phone-container">
-                <div id="phone-screen">
-                </div>
+                <div id="phone-screen"></div>
             </div>
-        
+        </div>
+
+        <br><br>
+
+        <!-- Personal Information Section -->
+        <div class="info-grid-container">
+            <div class="font-showcase-left">
+                <h3 class="font-f1"><b><i>👤 Personal Information</i></b></h3>
+                <p class="font-f1"><strong>Name:</strong> Ayush Surendra Harinkhede</p>
+                <p class="font-f1"><strong>Father's Name:</strong> Surendra Harinkhede</p>
+                <p class="font-f1"><strong>Date of Birth:</strong> 10th February 2005</p>
+                <p class="font-f1"><strong>Gender:</strong> Male</p>
+                <p class="font-f1"><strong>Marital Status:</strong> Unmarried</p>
+                <p class="font-f1"><strong>Category:</strong> OBC</p>
+            </div>
+
+            <div class="font-showcase-center">
+                <h3 class="font-f4"><b><i>📍 Contact Details</i></b></h3>
+                <p class="font-f1"><strong>Email:</strong> ayushharinkhere2005@gmail.com</p>
+                <p class="font-f1"><strong>Phone:</strong> 9209514158</p>
+                <p class="font-f1"><strong>Address:</strong> Waghdhara Issasani Hingna Road, Nagpur, Maharashtra - 441110</p>
+                <p class="font-f1"><strong>Nationality:</strong> Indian</p>
+            </div>
+
+            <div class="font-showcase-right">
+                <h3 class="font-f4"><b><i>🌐 Languages Known</i></b></h3>
+                <p class="font-f4"><strong>Fluent:</strong> English, Hindi, Marathi</p>
+                <p class="font-f4"><strong>Additional:</strong> Gujarati, Bhojpuri, Punjabi, Spanish</p>
+                <p class="font-f4">I believe in the power of communication and connecting with people from diverse backgrounds.</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- About Me Section -->
+        <div class="about-section">
+            <h3 class="font-f2">💡 About Me</h3>
+            <p class="font-f3">I am a passionate tech enthusiast and creative individual who believes in continuous learning and growth. Born and raised in Nagpur, I've always been fascinated by technology and its potential to solve real-world problems. My journey in tech started with curiosity and has evolved into a deep commitment to mastering computer applications and programming.</p>
+            <p class="font-f3">Beyond technology, I am a multifaceted personality who enjoys creative pursuits like script writing and stand-up comedy. I believe that humor and creativity are essential ingredients for innovation. My practice in martial arts has taught me discipline, focus, and perseverance – qualities that I apply in every aspect of my life.</p>
+            <p class="font-f3">What drives me is the desire to create meaningful solutions and connect with people. Whether it's through code, comedy, or conversation, I strive to make a positive impact in everything I do.</p>
         </div><br><br><br><br>
+
         
-
- <div class="bhaag">
-    <h2 class="Sarpanch font-f2">Font Styles</h2>
-<div class="font-showcase">
-                <p class="font-f1">Yeh F1 Doodle Font Hai (Patrick Hand)</p>
-                <p class="font-f2">Yeh F2 Doodle Font Hai (Caveat)</p>
-                <p class="font-f3">Yeh F3 Doodle Font Hai (Indie Flower)</p>
-                <p class="font-f4">Yeh F4 Doodle Font Hai (Kalam)</p>
- </div></div><br><br><br><br>
-
-            <div class="bhaag">
-            <h2 class="Sarpanch font-f2">Meri Gallery</h2>
+        <!-- Meri Gallery Section -->
+            <h2 class="Sarpanch font-f2">My Journey</h2>
             
             <div class="circle-gallery">
                 
                 <div class="chhota-container">
                     <div class="dotted-circle">
                         <div class="circle-image"></div>
-                    </div>
-                    <p class="chhota-text font-f1">Project ka Naam</p>
+                    </div><br>
+                     <h3 class="font-f1">2005 - Born in Nagpur, Maharashtra</h3>
+                <p class="font-f4">Started my journey in this world on 10th February 2005.</p>
                 </div>
                 
                 <div class="chhota-container">
                     <div class="dotted-circle">
                         <div class="circle-image"></div>
                     </div>
-                    <p class="chhota-text font-f1">Hobby ka Naam</p>
+                    <h3 class="font-f1">2010 - Started Schooling</h3>
+                <p class="font-f4">Began my formal education and developed a love for learning.</p>
                 </div>
                 
                 <div class="chhota-container">
                     <div class="dotted-circle">
                         <div class="circle-image"></div>
                     </div>
-                    <p class="chhota-text font-f1">Kuch Aur</p>
+                    <h3 class="font-f1">2020 - Completed Secondary School Education</h3>
+                <p class="font-f4">Graduated from secondary school with a focus on science and technology.</p>
                 </div>
                 
                 <div class="chhota-container">
                     <div class="dotted-circle">
                         <div class="circle-image"></div>
                     </div>
-                    <p class="chhota-text font-f1">Chautha Item</p>
+                  <h3 class="font-f1">2022 - Completed Higher Secondary Education</h3>
+                <p class="font-f4">Graduated from higher secondary school with a focus on science and technology.</p>
                 </div>
+
+                 <div class="chhota-container">
+                    <div class="dotted-circle">
+                        <div class="circle-image"></div>
+                    </div>
+                  <h3 class="font-f1">2023 - Enrolled in BCA at GHRUA</h3>
+                <p class="font-f4">Started my Bachelor of Computer Applications degree to deepen my knowledge in computer science.</p>
+                </div>
+
+                 <div class="chhota-container">
+                    <div class="dotted-circle">
+                        <div class="circle-image"></div>
+                    </div>
+                  <h3 class="font-f1">2024 - Exploring New Technologies</h3>
+                <p class="font-f4">Diving into web development, programming, and creative projects to build a strong foundation for my future career.</p>
+                </div><br><br><br><br>
             
-            </div>  </div><br><br><br><br>
+            </div> 
             
-            
-        <div class="bhaag">
+
+       
+
+        <!-- My Creations -->
+        <h2 class="Sarpanch font-f2">My Creations</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Image5.png" alt="Portfolio Spectrum">
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio Spectrum</h3>
+                    <p class="project-tech">HTML | CSS</p>
+                    <p>A personal portfolio website built to showcase my skills, projects, and journey. Designed with a focus on user experience and modern web design principles.</p>
+                    <div class="project-tags">
+                        <span class="tag">Personal Portfolio</span>
+                        <span class="tag">Frontend</span>
+                        <span class="tag">Resume</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Image6.png" alt="VANIE">
+                </div>
+                <div class="project-content">
+                    <h3>VANIE</h3>
+                    <p class="project-tech">C | C++ | JavaScript</p>
+                    <p>An AI Platform that runs in integrated server of NPU.</p>
+                    <div class="project-tags">
+                        <span class="tag">Algorithms</span>
+                        <span class="tag">Data Structures</span>
+                        <span class="tag">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Image7.jpg" alt="Mocha">
+                </div>
+                <div class="project-content">
+                    <h3>Mocha</h3>
+                    <p class="project-tech">Fully Written in JavaScript</p>
+                    <p>Mocha is a JavaScript test framework for Node.js and browsers, making asynchronous testing simple and fun.</p>
+                    <div class="project-tags">
+                        <span class="tag">Writing</span>
+                        <span class="tag">JS Codes</span>
+                        <span class="tag">For Practice</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="bhaag">
             <h2 class="Sarpanch font-f2">Kuch Sawaal (FAQ)</h2>
             <div class="faq-container">
                 
@@ -393,23 +710,147 @@ Body::before {
 
             </div>
         </div><br><br><br><br>
-        
-        
-<div class="bhaag">
-            <h2 class="Sarpanch font-f2">Mera Safar</h2>
-            
- <div class="side-by-side-container">
-     <div class="paath">
-                     <p class="font-f1">Yahan Title Likhein</p>
-                    <p class="font-f2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas natus et aliquam incidunt sunt aperiam omnis iste adipisci eaque repellendus molestias, asperiores quaerat corrupti deserunt illum officiis consequatur est. Illo unde aspernatur culpa aut saepe optio deserunt omnis sequi sint itaque debitis sit impedit vero tempora, enim, commodi temporibus. Optio commodi hic voluptatum! Exercitationem nemo eos quibusdam obcaecati ipsam veritatis numquam tenetur voluptatum, nam harum molestias voluptatem qui libero provident, officiis repudiandae illum eveniet, fuga culpa! Repudiandae saepe obcaecati suscipit, eaque id quia debitis inventore facere ratione. Qui accusamus at vel cumque, quam dolorem aspernatur blanditiis fuga nemo quae sed?</p>
-                    <p class="font-f3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
- </div>
-                
-<div class="chitra-placeholder">
-     Side Image Yahan  </div></div></div></div><br><br><br><br>
 
-                <footer style="text-align: center; padding: 40px 0; color: var(--text-secondary); margin-top: 60px;">
-            <p class="font-f1">© 2024-2025 Portfolio Spectrum. Made with ❤️</p> <p class="font-f3">Creative | Innovative | Passionate</p> <a href="#" onclick="openModal('privacyPolicyModal')" data-key="footerPrivacy">Privacy Policy</a> | <a href="#" onclick="openModal('termsOfServiceModal')" data-key="footerTerms">Terms of Service</a> <p class="font-f1">All Right's Reserved by <b><i>Ayush Harinkhede</i></b></p> </footer>
+        <!-- Get in Touch / Social Media -->
+        <div class="social-section">
+            <h2 class="social-title">🌐 Get in Touch - Connect With Me</h2>
+            <div class="social-grid">
+                <a href="https://www.instagram.com/ayush_harinkhere?igsh=ZWUxNXM0MGd3ZmNu" class="social-card instagram" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                    </svg>
+                    <span class="social-name">Instagram</span>
+                </a>
 
-</Body>
+                <a href="https://www.facebook.com/share/17a26WTexc" class="social-card facebook" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+                    </svg>
+                    <span class="social-name">Facebook</span>
+                </a>
+
+                <a href="https://youtube.com/@ashtag_ayush?feature=shared" class="social-card youtube" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
+                    </svg>
+                    <span class="social-name">YouTube</span>
+                </a>
+
+                <a href="https://linkedin.com" class="social-card linkedin" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/>
+                    </svg>
+                    <span class="social-name">LinkedIn</span>
+                </a>
+
+                <a href="https://wa.me/919209514158" class="social-card whatsapp" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z"/>
+                    </svg>
+                    <span class="social-name">WhatsApp</span>
+                </a>
+
+                <a href="mailto:ayushharinkhere2005@gmail.com" class="social-card gmail">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M20,18H18V9.25L12,13L6,9.25V18H4V6H5.2L12,10.25L18.8,6H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                    </svg>
+                    <span class="social-name">Gmail</span>
+                </a>
+
+                <a href="https://github.com/AyushHarinkhede" class="social-card github" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                    </svg>
+                    <span class="social-name">GitHub</span>
+                </a>
+
+                <a href="https://signal.me/#eu/d-xnZ14twZOj_8DevTe34UqH0VyfFedVpjKkOI7W-n9a1XHFVdVNiZiPp9lb6Rtg" class="social-card signal" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 512 512">
+                        <path d="M256 140c-68 0-124 50-124 112 0 25 8 49 22 68l-10 38a6 6 0 0 0 7 7l38-10a124 124 0 0 0 67 20c68 0 124-50 124-112S324 140 256 140z" fill="#FFFFFF"/>
+                        <circle cx="256" cy="256" r="165" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-dasharray="30 20" stroke-linecap="round"/>
+                    </svg>
+                    <span class="social-name">Signal</span>
+                </a>
+
+                <a href="https://www.snapchat.com/add/ayushharinkhere?share_id=jmrUbhs5QJ4&locale=en-IN-u-mu-celsius" class="social-card snapchat" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 100 100">
+                        <path d="M50 18 C 35 18, 24 29, 24 45 C 24 57, 27 63, 31 70 C 35 77, 43 82, 50 82 C 57 82, 65 77, 69 70 C 73 63, 76 57, 76 45 C 76 29, 65 18, 50 18 Z M 31 63 C 31 63, 33 59, 36 59 C 39 59, 40 63, 40 63 C 40 63, 42 59, 45 59 C 48 59, 49 63, 49 63 C 49 63, 51 59, 54 59 C 57 59, 58 63, 58 63 C 58 63, 60 59, 63 59 C 66 59, 67 63, 67 63 L 69 70 C 65 77, 57 82, 50 82 C 43 82, 35 77, 31 70 Z" fill="#FFFFFF" stroke="#000" stroke-width="5" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="social-name">Snapchat</span>
+                </a>
+
+                <a href="https://www.duolingo.com/profile/AyushHarinkhere?via=share_profile_linkm" class="social-card duolingo" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 100 100">
+                        <path d="M50,25 C 25,25 10,40 10,60 L 10,75 L 90,75 L 90,60 C 90,40 75,25 50,25 Z" fill="#78D632"/>
+                        <circle cx="35" cy="50" r="12" fill="white"/>
+                        <circle cx="37" cy="50" r="5" fill="#333"/>
+                        <circle cx="65" cy="50" r="12" fill="white"/>
+                        <circle cx="63" cy="50" r="5" fill="#333"/>
+                        <path d="M45,65 Q 50,75 55,65 L 50,60 Z" fill="#FFB800"/>
+                    </svg>
+                    <span class="social-name">Duolingo</span>
+                </a>
+
+                <a href="https://t.me/ayushharinkhere2005" class="social-card telegram" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"/>
+                    </svg>
+                    <span class="social-name">Telegram</span>
+                </a>
+
+                <a href="https://x.com/AyushHarinkhere?t=9-6Rz3q9RqSvZK5q4mnvgw&s=09" class="social-card twitter" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    <span class="social-name">X (Twitter)</span>
+                </a>
+
+                <a href="https://pin.it/2wUjXYwYsm" class="social-card pinterest" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                    </svg>
+                    <span class="social-name">Pinterest</span>
+                </a>
+
+                <a href="https://www.reddit.com/u/ayush_harinkhere/s/dFu9g0OBwP" class="social-card reddit" target="_blank">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                    </svg>
+                    <span class="social-name">Reddit</span>
+                </a>
+
+                <a href="sms:+919209514158" class="social-card messege">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+                    </svg>
+                    <span class="social-name">Message</span>
+                </a>
+
+                <a href="tel:+919209514158" class="social-card phone">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    <span class="social-name">Phone</span>
+                </a>
+
+                <a href="https://www.arattai.com/u/@ayushharinkhere" class="social-card arattai" target="_blank">
+                    <svg class="social-icon" viewBox="0 -50 220 210">
+                        <path d="M 30 20 L 30 20 C 30 15 35 10 40 10 L 130 10 C 135 10 140 15 140 20 L 140 90 C 140 95 135 100 130 100 L 80 100 L 60 120 L 60 100 L 40 100 C 35 100 30 95 30 90 Z" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="50" y1="55" x2="120" y2="55" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+                        <rect x="170" y="10" width="14" height="110" fill="#FFFFFF" rx="7"/>
+                    </svg>
+                    <span class="social-name">Arattai</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="font-f1">© 2024-2025 Portfolio Spectrum. Made with ❤️</p>
+            <p class="font-f3">Creative | Innovative | Passionate</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            <p class="font-f1">All Rights Reserved by <b><i>Ayush Harinkhede</i></b></p>
+        </footer>
+    </div>
+</body>
 </html>
