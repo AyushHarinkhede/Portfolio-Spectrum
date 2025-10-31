@@ -5,16 +5,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #f093fb;
-    --bg-dark: #0a0a0a;
-    --bg-card: #1a1a2e;
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-}
 
 html {
     scroll-behavior: smooth;
@@ -25,10 +15,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    
-    /* Content ko center me laane ke liye */
+     
+     /* Content ko center me laane ke liye */
     min-height: 100vh;
-    display: grid;
+      display: grid;
     place-items: center;
     
     /* Position relative zaroori hai pseudo-elements ke liye */
@@ -126,27 +116,27 @@ h1 {
 
 /* Navigation Bar */
 .navbar {
-    background: rgba(26, 26, 46, 0);
+ background: rgba(26, 26, 46, 0);
     backdrop-filter: blur(10px);
     position: fixed;
     width: 90%;
-    box-shadow: #0a0a0a 0 8px 32px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset  ;
-    border-radius: 45px;
-    border: 1px solid rgba(var(--on-surface-rgb), 0.1);
+           box-shadow: #0a0a0a 0 8px 32px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset  ;
+     border-radius: 45px;
+      border: 1px solid rgba(var(--on-surface-rgb), 0.1);
     top: 0.5rem;
-    z-index: 1000;
+      z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     animation: slideDown 0.5s ease;
 }
 
 .nav-container {
     max-width: 1200px;
-    margin: 0 auto;
+      margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+        justify-content: space-between;
     align-items: center;
     border: #0026ff;
-    padding: 1rem 2rem;
+       padding: 1rem 2rem;
 }
 
 .logo {
