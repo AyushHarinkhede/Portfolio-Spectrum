@@ -282,8 +282,8 @@ display: flex;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+ transform: translateY(-3px);
+box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
 }
 
 .btn-secondary {
