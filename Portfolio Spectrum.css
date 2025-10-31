@@ -277,7 +277,7 @@ display: flex;
 
 .btn-primary {
     background: var(--gradient);
-    color: white;
+ color: white;
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
 
