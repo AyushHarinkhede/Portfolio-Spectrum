@@ -307,8 +307,8 @@ box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
     text-align: center;
     margin-bottom: 3rem;
     background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
 }
 
 .content-grid {
