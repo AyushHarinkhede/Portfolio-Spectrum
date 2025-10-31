@@ -249,8 +249,8 @@ display: flex;
     font-size: 4rem;
     margin-bottom: 1rem;
     background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+              -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
     line-height: 1.2;
 }
 
