@@ -20,17 +20,17 @@
             box-sizing: border-box;
         }
 
-        html {
+  html {
             scroll-behavior: smooth;
         }
 
      Body {
     /* Off-white / Creamy background */
     /* Text ka halka dark colour */
-    font-family: Arial, sans-serif; /* Default font */
-    margin: 0;
-    padding: 0;
-    background-color: #333;
+   font-family: Arial, sans-serif; /* Default font */
+margin: 0;
+     padding: 0;
+       background-color: #333;
     
     /* FIX 1: Background ko scrollable banane ke liye parent ko relative banana zaroori hai */
     position: relative; 
@@ -52,38 +52,38 @@ Body::before {
 
     /* PROBLEM 1 FIX: 'fixed' ki jagah 'absolute' karein */
     position: absolute;
-    top: 10;
+       top: 10;
     left: 0;
-    width: 100%;
+      width: 100%;
     
     /* '100vh' (viewport height) ki jagah '100%' (full body height) karein */
-    height: 100%;  
-    background: url('imgbg1.png') center/cover;
+       height: 100%;  
+      background: url('imgbg1.png') center/cover;
     filter: blur(3px); /* Yahaan hai blur effect ('3px' ko kam jhayada karna hai) */
 }
  #mukhiya {
             width: 90%;
-            max-width: 1000px;
-            margin: 20px auto;
+             max-width: 1000px;
+       margin: 20px auto;
             position: relative;
-            z-index: 1;
+         z-index: 1;
         }
 
    .Sarpanch {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-family: 'Caveat';
-            color: #333;
+    text-align: center;
+     font-size: 2.5em;
+                margin-bottom: 10px;
+     font-family: 'Caveat';
+         color: #333;
         }
 
         /* Header with Phone */
  .header-grid-container {
-            display: grid;
-            grid-template-columns: 5fr 285px;
-            gap: 50px;
+      display: grid;
+       grid-template-columns: 5fr 285px;
+         gap: 50px;
             align-items: center;
-            padding: 20px 0;
+         padding: 20px 0;
         }
 
 .header-grid-container .font-showcase-left {
@@ -92,40 +92,40 @@ Body::before {
 
  .header-grid-container .font-showcase-left .Sarpanch {
             text-align: right;
-            margin-bottom: 0;
+               margin-bottom: 0;
         }
 
  #phone-container {
             width: 285px;
-            height: 555px;
-            border: 12px solid #333;
-            border-radius: 40px;
-            margin: 0;
+              height: 555px;
+border: 12px solid #333;
+         border-radius: 40px;
+               margin: 0;
             padding: 0px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.656);
-            display: flex;
+               box-shadow: 0 10px 25px rgba(0, 0, 0, 0.656);
+              display: flex;
             justify-content: center;
             align-items: center;
-            box-sizing: border-box;
+      box-sizing: border-box;
         }
 
  #phone-screen {
-            width: 100%;
-            height: 100%;
-            border-radius: 25px;
+               width: 100%;
+               height: 100%;
+              border-radius: 25px;
             background-image: url('Image1.jpg');
-            background-size: cover;
-            background-position: center;
+background-size: cover;
+         background-position: center;
         }
 
         /* Info Grid - 3 Columns */
      .info-grid-container {
-            display: grid;
+         display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 0;
-            width: 100%;
+              gap: 0;
+              width: 100%;
             max-width: 1000px;
-            margin: 20px auto;
+          margin: 20px auto;
             align-items: start;
                border-radius: 15px;
             padding: 20px 0;
@@ -133,9 +133,9 @@ Body::before {
 
         .info-grid-container .font-showcase-left {
             text-align: left;
-            font-size: 1em;
-            padding: 0 20px;
-            border-right: 4px dotted #aaaaaa;
+     font-size: 1em;
+             padding: 0 20px;
+         border-right: 4px dotted #aaaaaa;
         }
 
         .info-grid-container .font-showcase-center {
