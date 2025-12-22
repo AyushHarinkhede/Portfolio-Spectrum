@@ -20,6 +20,29 @@
 
 ---
 
+
+### 🛠️ Languages and Tools
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,java,py,cpp,git,github,vscode,linux&theme=dark&perline=6" alt="My Skills" />
+</div>
+
+---
+
+### 📊 GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=AyushHarinkhede&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=23F709&icon_color=23F709" alt="Ayush's Stats" />
+  <br/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AyushHarinkhede&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=23F709" alt="Ayush's Top Langs" />
+</div>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=AyushHarinkhede&label=Profile%20Views&color=23F709&style=for-the-badge" alt="Profile Views" />
+</p>
+
+
+
 ### 🌐 Connect With Me
 
 <div align="center">
@@ -69,23 +92,5 @@
 
 ---
 
-### 🛠️ Languages and Tools
 
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,java,py,cpp,git,github,vscode,linux&theme=dark&perline=6" alt="My Skills" />
-</div>
-
----
-
-### 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AyushHarinkhede&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=23F709&icon_color=23F709" alt="Ayush's Stats" />
-  <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AyushHarinkhede&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=23F709" alt="Ayush's Top Langs" />
-</div>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=AyushHarinkhede&label=Profile%20Views&color=23F709&style=for-the-badge" alt="Profile Views" />
-</p>
 
