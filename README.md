@@ -7,8 +7,6 @@
   </a>
 </div>
 
----
-
 ### 👨‍💻 About Me
 
 - 📍 **Location:** Waghdhara Issasani Hingna Road, Nagpur, Maharashtra - 441110 India
@@ -18,17 +16,7 @@
 - 💬 Ask me about **Java, Python, C++, HTML, CSS, JS, & React**.
 - ⚡ **Fun fact:** I love coding while listening to music!
 
----
-
-
-### 🛠️ Languages and Tools
-
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,java,py,cpp,git,github,vscode,linux&theme=dark&perline=6" alt="My Skills" />
-</div>
-
----
-
+  
 ### 📊 GitHub Stats
 
 <div align="center">
@@ -40,8 +28,15 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=AyushHarinkhede&label=Profile%20Views&color=23F709&style=for-the-badge" alt="Profile Views" />
 </p>
+### 🛠️ Languages and Tools
 
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,java,py,cpp,git,github,vscode,linux&theme=dark&perline=6" alt="My Skills" />
+</div>
 
+<div align="center">
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="600" height="300"/>
+</div>
 
 ### 🌐 Connect With Me
 
@@ -91,6 +86,7 @@
 </div>
 
 ---
+
 
 
 
