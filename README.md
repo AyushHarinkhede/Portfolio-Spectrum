@@ -43,7 +43,7 @@
 
 ---
 
-<h3 align="center">My GitHub Statistics</h3>
+<!-- <h3 align="center">My GitHub Statistics</h3>
 
 <div align="center">
   <a href="https://github.com/AyushHarinkhede">
@@ -52,14 +52,15 @@
   <a href="https://github.com/AyushHarinkhede">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AyushHarinkhede&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000" height="170" alt="languages" />
   </a>
-</div>
+</div> -->
+
 
 <div align="center">
  <a href="https://github.com/AyushHarinkhede">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=23F709&background=00000000&center=true&vCenter=true&width=435&lines=Eat.+Sleep.+Code.+Repeat.;Debugging+Life...;Coffee+%2B+Code+%3D+Magic+%E2%9C%A8;Welcome+to+my+Digital+World!" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=23F709&background=00000000&center=true&vCenter=true&width=435&lines=npm+install+brain+(Error:+404);Your+code+is+why+aliens+won't+talk+to+us;Even+Copilot+hates+your+code;You+don't+fix+bugs%2C+you+breed+them;Delete+repository?+[Yes];Glorified+Copy-Paste+Artist;Your+commit+history+is+a+crime+scene;ChatGPT+writes+better+code+than+you;Professional+StackOverflow+Copy-Paster;Your+spaghetti+code+scares+juniors;AI+will+replace+you+in+5+years;404:+Logic+Not+Found;Docs+read:+None%3B+Bugs+created:+Infinite;​It+works+on+my+machine;git+push+--force+%26+pray;Sudo+rm+-rf+%2Fmy%2Fsanity;Warning:+I+test+in+Production;I+write+bugs%2C+not+code;%2F%2F+TODO:+Fix+later+(Never)" alt="Typing SVG" />
 </a>
-
 </div>
+
 
 ---
 
