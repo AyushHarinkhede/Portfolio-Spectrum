@@ -13,7 +13,7 @@
 </div>
 
  
-
+ 
 ---
 
 <h3 align="center"> Inside the Mind of a Developer</h3>
