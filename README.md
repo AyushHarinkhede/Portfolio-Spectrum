@@ -5,7 +5,7 @@
 <div align="center">
   <a href="https://github.com/AyushHarinkhede"> 
     <img src="https://komarev.com/ghpvc/?username=AyushHarinkhede&label=Profile%20Views&color=blueviolet&style=flat-square" alt="Profile Views" />
-  </a>
+  </a> 
   <br/>
   <a href="https://github.com/AyushHarinkhede">
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=9643F7&background=00000000&center=true&vCenter=true&width=435&lines=Eat()+%7B+Sleep()+%7D+Code();Building+Digital+Dreams...;Java+%7C+Python+%7C+React+%7C+C%2B%2B;Welcome+to+my+Creative+Space!;Debugging+Life...;Coffee+%2B+Code+%3D+Magic+%E2%9C%A8;Welcome+to+my+Digital+World" alt="Typing SVG" />
