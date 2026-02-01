@@ -1,5 +1,7 @@
 <h1 align="center">Hi there 👋, I'm Ayush Harinkhede</h1> 
 <h3 align="center">🚀 Fullstack Developer | Open Source Enthusiast</h3>     
+[![](https://github.com/ishandutta2007/ishandutta2007/blob/main/chat.svg)](https://twitter.com/ishandutta2007)
+
   
  
 <div align="center">
@@ -130,6 +132,7 @@
 </div>
 
 ---
+
 
 
 
