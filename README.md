@@ -1,11 +1,20 @@
 <h1 align="center">Hi there 👋, I'm Ayush Harinkhede</h1>
 ​<div align="center">
-<!-- Ishan-style Top Welcome Chat Section -->
-<a href="https://github.com/AyushHarinkhede">
-<img src="https://www.google.com/search?q=https://readme-typing-svg.herokuapp.com%3Ffont%3DFira%2BCode%26size%3D25%26pause%3D1000%26color%3D9643F7%26center%3Dtrue%26vCenter%3Dtrue%26width%3D500%26lines%3DHi%2Bthere!%2BI%27m%2BAyush%3BA%2BFullstack%2BDeveloper%3BBased%2Bin%2BNagpur,%2BIndia%3BBuilding%2BNext-Gen%2BWeb%2BApps%3BWelcome%2Bto%2Bmy%2Bdigital%2Bspace!" alt="Typing SVG" />
-</a>
+<!-- Photo 2: Chat-style Introduction bubbles mimic -->
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/-Hi%252C%2520I%27m%2520Ayush-gray%3Fstyle%3Dfor-the-badge%26logo%3Dappveyor%26logoColor%3Dwhite" />
+
+
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/-Fullstack%2520Developer%2520%2526%2520Open%2520Source%2520Enthusiast-gray%3Fstyle%3Dfor-the-badge" />
+
+
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/-Passionate%2520about%2520AI%2520%2526%2520Scalable%2520Systems-gray%3Fstyle%3Dfor-the-badge" />
+
+
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/-Based%2520in%2520Nagpur%252C%2520India-gray%3Fstyle%3Dfor-the-badge" />
 </div>
 ​<div align="center">
+
+
 <a href="https://github.com/AyushHarinkhede">
 <img src="https://komarev.com/ghpvc/?username=AyushHarinkhede&label=Profile%20Views&color=blueviolet&style=flat-square" alt="Profile Views" />
 </a>
@@ -34,43 +43,81 @@
 </p>
 </div>
 ​<br clear="all"/>
-​<!-- My Favorite Tools and Technologies (Ishan's Animation Style) -->
-​<h3 align="center"> 🛠️ My Favorite Tools and Technologies</h3>
+​<!-- Photo 1 & 3: Languages and Tools Grid -->
+​<h3 align="center">💻 My Favorite Tools and Technologies</h3>
 <div align="center">
-<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="35" /></a>
-<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="35" /></a>
-<a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="35" /></a>
-<a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="35" /></a>
-<a href="https://www.java.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="35" /></a>
-<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="35" /></a>
-<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="35" /></a>
-<a href="https://www.google.com/search?q=https://getbootstrap.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="35" /></a>
-<a href="https://www.tailwindcss.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg" alt="Tailwind CSS" height="35" /></a>
-<a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="35" /></a>
-<a href="https://firebase.google.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/firebase.png" alt="Firebase" height="35" /></a>
-<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="35" /></a>
+<table align="center">
+<tr>
+<td align="center" width="96"><img src="https://www.google.com/search?q=https://skillicons.dev/icons%3Fi%3Dreact" width="48" height="48" />
+React</td>
+<td align="center" width="96"><img src="https://www.google.com/search?q=https://skillicons.dev/icons%3Fi%3Dpy" width="48" height="48" />
+Python</td>
+<td align="center" width="96"><img src="https://www.google.com/search?q=https://skillicons.dev/icons%3Fi%3Djs" width="48" height="48" />
+JavaScript</td>
+<td align="center" width="96"><img src="https://www.google.com/search?q=https://skillicons.dev/icons%3Fi%3Dcpp" width="48" height="48" />
+C++</td>
+<td align="center" width="96"><img src="https://www.google.com/search?q=https://skillicons.dev/icons%3Fi%3Dmysql" width="48" height="48" />
+MySQL</td>
+<td align="center" width="96"><img src="https://www.google.com/search?q=https://skillicons.dev/icons%3Fi%3Dts" width="48" height="48" />
+TypeScript</td>
+<td align="center" width="96"><img src="https://www.google.com/search?q=https://skillicons.dev/icons%3Fi%3Daws" width="48" height="48" />
+AWS</td>
+</tr>
+<tr>
+<td align="center" width="96"><img src="https://www.google.com/search?q=https://skillicons.dev/icons%3Fi%3Dgithub" width="48" height="48" />
+Github</td>
+<td align="center" width="96"><img src="https://www.google.com/search?q=https://skillicons.dev/icons%3Fi%3Dgit" width="48" height="48" />
+Git</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=html" width="48" height="48" />
+HTML5</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=css" width="48" height="48" />
+CSS3</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=bootstrap" width="48" height="48" />
+Bootstrap</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" />
+Tailwind</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=jquery" width="48" height="48" />
+jQuery</td>
+</tr>
+<tr>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=mongodb" width="48" height="48" />
+MongoDB</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=nodejs" width="48" height="48" />
+Nodejs</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=php" width="48" height="48" />
+PHP</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=vscode" width="48" height="48" />
+VsCode</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=wordpress" width="48" height="48" />
+WordPress</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=sass" width="48" height="48" />
+Sass</td>
+<td align="center" width="96"><img src="https://skillicons.dev/icons?i=postgres" width="48" height="48" />
+PostgreSQL</td>
+</tr>
+</table>
 </div>
-​<!-- GitHub Snake Game Section -->
+​<!-- Photo 3: Snake Game -->
 ​<h3 align="center">🐍 GitHub Contribution Snake</h3>
 <div align="center">
 <img src="https://www.google.com/search?q=https://raw.githubusercontent.com/AyushHarinkhede/AyushHarinkhede/output/github-contribution-grid-snake.svg" alt="Snake Animation" />
 </div>
-​<!-- GitHub Stats Section (Gotham Theme Inspired by Ishan) -->
+​<!-- GitHub Stats Section (Gotham Theme Like Ishan's) -->
 ​<h3 align="center">📊 GitHub Stats & Analytics</h3>
 <p align="center">
 <a href="https://github.com/AyushHarinkhede">
-<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3DAyushHarinkhede%26show_icons%3Dtrue%26theme%3Dgotham%26hide_border%3Dtrue%26bg_color%3D0D1117%26title_color%3D9643F7%26icon_color%3D23F709" width="48%" alt="Ayush's Stats" />
+<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3DAyushHarinkhede%26show_icons%3Dtrue%26theme%3Dgotham%26hide_border%3Dtrue%26count_private%3Dtrue" width="48%" alt="Ayush's Stats" />
 </a>
 <a href="https://github.com/AyushHarinkhede">
-<img src="https://www.google.com/search?q=https://github-readme-streak-stats.herokuapp.com/%3Fuser%3DAyushHarinkhede%26theme%3Dgotham%26hide_border%3Dtrue%26background%3D0D1117%26sideNums%3D9643F7%26stroke%3D9643F7" width="48%" alt="Ayush's Streak" />
+<img src="https://www.google.com/search?q=https://github-readme-streak-stats.herokuapp.com/%3Fuser%3DAyushHarinkhede%26theme%3Dgotham%26hide_border%3Dtrue" width="48%" alt="Ayush's Streak" />
 </a>
 </p>
 ​<p align="center">
 <a href="https://github.com/AyushHarinkhede">
-<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api/top-langs/%3Fusername%3DAyushHarinkhede%26layout%3Dcompact%26theme%3Dgotham%26hide_border%3Dtrue%26bg_color%3D0D1117%26title_color%3D9643F7" width="58%" alt="Top Languages" />
+<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api/top-langs/%3Fusername%3DAyushHarinkhede%26layout%3Dcompact%26theme%3Dgotham%26hide_border%3Dtrue%26langs_count%3D8" width="58%" alt="Top Languages" />
 </a>
 </p>
-​<!-- Green Message Section (The Roast/Humor section) -->
+​<!-- Roast/Humor section -->
 ​<div align="center">
 <a href="https://github.com/AyushHarinkhede">
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=23F709&background=00000000&center=true&vCenter=true&width=435&lines=npm+install+brain+(Error:+404);Your+code+is+why+aliens+won't+talk+to+us;Even+Copilot+hates+your+code;You+don't+fix+bugs%2C+you+breed+them;Delete+repository?+[Yes];Glorified+Copy-Paste+Artist;Your+commit+history+is+a+crime+scene;ChatGPT+writes+better+code+than+you;Professional+StackOverflow+Copy-Paster;Your+spaghetti+code+scares+juniors;AI+will+replace+you+in+5+years;404:+Logic+Not+Found;Docs+read:+None%3B+Bugs+created:+Infinite;It+works+on+my+machine;git+push+--force+%26+pray;Sudo+rm+-rf+%2Fmy%2Fsanity;Warning:+I+test+in+Production;I+write+bugs%2C+not+code;%2F%2F+TODO:+Fix+later+(Never)" alt="Typing SVG" />
@@ -99,7 +146,7 @@
 <a href="https://linkedin.com" target="_blank">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
-<a href="https://x.com/AyushHarinkhere?t=9-6Rz3q9RqSvZK5q4mnvgw&s=09" target="_blank">
+<a href="https://www.google.com/search?q=https://x.com/AyushHarinkhere" target="_blank">
 <img src="https://www.google.com/search?q=https://img.shields.io/badge/X-000000%3Fstyle%3Dfor-the-badge%26logo%3Dx%26logoColor%3Dwhite" alt="X"/>
 </a>
 <a href="https://youtube.com/@ashtag_ayush?feature=shared" target="_blank">
