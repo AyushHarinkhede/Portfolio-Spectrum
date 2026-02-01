@@ -44,17 +44,6 @@
 
 ---
 
-<!-- <h3 align="center">My GitHub Statistics</h3>
-
-<div align="center">
-  <a href="https://github.com/AyushHarinkhede">
-    <img src="https://github-readme-stats.vercel.app/api?username=AyushHarinkhede&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" height="170" alt="stats" />
-  </a>
-  <a href="https://github.com/AyushHarinkhede">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AyushHarinkhede&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000" height="170" alt="languages" />
-  </a>
-</div> -->
-
 
 <div align="center">
  <a href="https://github.com/AyushHarinkhede">
@@ -156,6 +145,7 @@
 </p>
 
 ---
+
 
 
 
