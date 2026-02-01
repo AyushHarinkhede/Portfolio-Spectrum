@@ -1,9 +1,11 @@
 <h1 align="center">Hi there 👋, I'm Ayush Harinkhede</h1> 
 
-<h3 align="center">🚀 Fullstack Developer | Open Source Enthusiast</h3>     
+<p align="center">
+  <a href="https://twitter.com/AyushHarinkhere">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=9643F7&background=00000000&center=true&vCenter=true&width=435&lines=Who+is+Ayush%3F;A+Fullstack+Developer...;Building+Digital+Dreams;Nagpur's+Finest+Coder;Let's+Build+Something+Great!" alt="Typing SVG" />
+  </a>
+</p>
 
-  
- 
 <div align="center">
   <a href="https://github.com/AyushHarinkhede"> 
     <img src="https://komarev.com/ghpvc/?username=AyushHarinkhede&label=Profile%20Views&color=blueviolet&style=flat-square" alt="Profile Views" />
@@ -14,8 +16,6 @@
   </a>   
 </div>  
 
-  
- 
 ---
 
 <h3 align="center"> Inside the Mind of a Developer</h3>
@@ -27,7 +27,7 @@
     👋 <b>Hi, I'm Ayush!</b> A passionate coder from <b>Nagpur, India</b>.<br><br>
     - 🔭 Working on: <b>Fullstack Web Apps & AI Integration</b><br>
     - 🌱 Learning: <b>Advanced React, Next.js & System Design</b><br>
-    - 📍 Location: <b>Waghdhara Issasani Hingna Road, Nagpur - 441110</b><br>
+    - 📍 Location: <b>Nagpur, Maharashtra</b><br>
     - ⚡ Fun Fact: <b>I debug code faster with headphones on! 🎧</b><br>
     - 📧 Mail me: <b><a href="mailto:ayushharinkhere2005@gmail.com">ayushharinkhere2005@gmail.com</a></b>
   </p>
@@ -37,34 +37,50 @@
 
 ---
 
-<h3 align="center"> Tech Stack & Arsenal</h3>
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,bootstrap,tailwind,java,py,c,cpp,git,github,vscode,linux,mysql,firebase&theme=dark&perline=8" />
+<h3 align="center"> 🛠️ My Favorite Tools and Technologies</h3>
+<div align="center">  
+<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="40" /></a>  
+<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="40" /></a>  
+<a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="40" /></a>  
+<a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="40" /></a>  
+<a href="https://www.java.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="40" /></a>  
+<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="40" /></a>  
+<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="40" /></a>  
+<a href="https://getbootstrap.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="40" /></a>  
+<a href="https://www.tailwindcss.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg" alt="Tailwind CSS" height="40" /></a>  
+<a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="40" /></a>  
+<a href="https://firebase.google.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/firebase.png" alt="Firebase" height="40" /></a>  
+<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="40" /></a>  
 </div>
 
 ---
 
-<!-- <h3 align="center">My GitHub Statistics</h3>
+<h3 align="center">🐍 GitHub Contribution Snake</h3>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AyushHarinkhede/AyushHarinkhede/output/github-contribution-grid-snake.svg" alt="snake game" />
+</p>
 
-<div align="center">
-  <a href="https://github.com/AyushHarinkhede">
-    <img src="https://github-readme-stats.vercel.app/api?username=AyushHarinkhede&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" height="170" alt="stats" />
-  </a>
-  <a href="https://github.com/AyushHarinkhede">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AyushHarinkhede&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000" height="170" alt="languages" />
-  </a>
-</div> -->
+---
 
+<h3 align="center">📊 My GitHub Analytics</h3>
+<p align="center">
+<a href="https://github.com/AyushHarinkhede"><img src="https://github-readme-stats-one-bice.vercel.app/api?username=AyushHarinkhede&theme=gotham&show_icons=true&count_private=true&hide_border=true" width="48%" alt="Ayush's stats"/></a>
+<a href="https://github.com/AyushHarinkhede"><img src="https://github-readme-streak-stats.herokuapp.com?user=AyushHarinkhede&theme=gotham&hide_border=true" width="48%" alt="Ayush's streak"/></a>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AyushHarinkhede&theme=gotham&hide_border=true&layout=compact" width="58%" alt="Top Langs" />
+</p>
+
+---
 
 <div align="center">
  <a href="https://github.com/AyushHarinkhede">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=23F709&background=00000000&center=true&vCenter=true&width=435&lines=npm+install+brain+(Error:+404);Your+code+is+why+aliens+won't+talk+to+us;Even+Copilot+hates+your+code;You+don't+fix+bugs%2C+you+breed+them;Delete+repository?+[Yes];Glorified+Copy-Paste+Artist;Your+commit+history+is+a+crime+scene;ChatGPT+writes+better+code+than+you;Professional+StackOverflow+Copy-Paster;Your+spaghetti+code+scares+juniors;AI+will+replace+you+in+5+years;404:+Logic+Not+Found;Docs+read:+None%3B+Bugs+created:+Infinite;​It+works+on+my+machine;git+push+--force+%26+pray;Sudo+rm+-rf+%2Fmy%2Fsanity;Warning:+I+test+in+Production;I+write+bugs%2C+not+code;%2F%2F+TODO:+Fix+later+(Never)" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=23F709&background=00000000&center=true&vCenter=true&width=435&lines=npm+install+brain+(Error:+404);Your+code+is+why+aliens+won't+talk+to+us;Even+Copilot+hates+your+code;You+don't+fix+bugs%2C+you+breed+them;Delete+repository?+[Yes];Glorified+Copy-Paste+Artist;Your+commit+history+is+a+crime+scene;ChatGPT+writes+better+code+than+you;Professional+StackOverflow+Copy-Paster;Your+spaghetti+code+scares+juniors;AI+will+replace+you+in+5+years;404:+Logic+Not+Found;Docs+read:+None%3B+Bugs+created:+Infinite;It+works+on+my+machine;git+push+--force+%26+pray;Sudo+rm+-rf+%2Fmy%2Fsanity;Warning:+I+test+in+Production;I+write+bugs%2C+not+code;%2F%2F+TODO:+Fix+later+(Never)" alt="Typing SVG" />
 </a>
 </div>
 
-
 ---
-
 
 <div align="center">
     <img src="https://github-readme-activity-graph.vercel.app/graph?username=AyushHarinkhede&bg_color=0D1117&color=9643F7&line=23F709&point=FFFFFF&hide_border=true" width="100%"/>
@@ -84,53 +100,21 @@
   <a href="tel:+919209514158">
     <img src="https://img.shields.io/badge/Phone-0078FF?style=for-the-badge&logo=google-phone&logoColor=white" alt="Phone"/>
   </a>
-  
 </div>
 
 <br>
 
 <div align="center">
- 
-  <a href="https://www.instagram.com/ayush_harinkhere?igsh=ZWUxNXM0MGd3ZmNu" target="_blank">
+  <a href="https://www.instagram.com/ayush_harinkhere" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
   </a>
    <a href="https://linkedin.com" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-  <a href="https://x.com/AyushHarinkhere?t=9-6Rz3q9RqSvZK5q4mnvgw&s=09" target="_blank">
-    <img src="https://img.shields.io/badge/X    -000000?style=for-the-badge&logo=x&logoColor=white" alt="X    "/>
+  <a href="https://x.com/AyushHarinkhere" target="_blank">
+    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/>
   </a>
-  <a href="https://www.facebook.com/share/17a26WTexc" target="_blank">
-    <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"/>
-  </a>
- 
-</div>
-
-<div align="center">
-  <br>
-  <a href="https://www.snapchat.com/add/ayushharinkhere?share_id=jmrUbhs5QJ4&locale=en-IN-u-mu-celsius" target="_blank">
-    <img src="https://img.shields.io/badge/Snapchat-FFFC00?style=for-the-badge&logo=snapchat&logoColor=black" alt="Snapchat"/>
-  </a>
-  <a href="https://youtube.com/@ashtag_ayush?feature=shared" target="_blank">
+  <a href="https://youtube.com/@ashtag_ayush" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
   </a>
-  <a href="https://t.me/ayushharinkhere2005" target="_blank">
-    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
-  </a>
-  <a href="https://www.reddit.com/u/ayush_harinkhere/s/dFu9g0OBwP" target="_blank">
-    <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit"/>
-  </a>
-  <a href="https://pin.it/2wUjXYwYsm" target="_blank">
-    <img src="https://img.shields.io/badge/Pinterest-BD081C?style=for-the-badge&logo=pinterest&logoColor=white" alt="Pinterest"/>
-  </a>
-    <a href="https://signal.me/#eu/d-xnZ14twZOj_8DevTe34UqH0VyfFedVpjKkOI7W-n9a1XHFVdVNiZiPp9lb6Rtg" target="_blank">
-    <img src="https://img.shields.io/badge/Signal-3A76F0?style=for-the-badge&logo=signal&logoColor=white" alt="Signal"/>
-  </a>
-   <a href="https://www.duolingo.com/profile/AyushHarinkhere?via=share_profile_linkm" target="_blank">
-    <img src="https://img.shields.io/badge/Duolingo-58CC02?style=for-the-badge&logo=duolingo&logoColor=white" alt="Duolingo"/>
-  </a>
 </div>
-
----
-
-
